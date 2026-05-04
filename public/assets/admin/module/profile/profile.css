@@ -1,0 +1,41 @@
+.myprofilepicedit{
+    width:150px;
+    height:150px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+.profile-picupdate{
+    width:150px;
+    height:150px;
+    border-radius: 50%;
+    background-color: aqua;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+.profile-picupdate:hover .profileupdateconta{
+    left: 0px;
+    top:0px;    
+    -ms-transform: skewY(0deg); /* IE 9 */
+    -webkit-transform: skewY(0deg); /* Safari 3-8 */
+    transform: skewY(0deg);
+}
+.profileupdateconta{
+    background-color: rgba(46, 71, 112,0.7);
+    position: absolute;
+    top:100px;
+    left: -70px;
+    height:150px;
+    width: 150px;
+    border-radius: 50%;
+    text-align: center;    
+    cursor: pointer;
+    -ms-transform: skewY(20deg); /* IE 9 */
+    -webkit-transform: skewY(20deg); /* Safari 3-8 */
+    transform: skewY(20deg);
+    transition: all 0.55s;
+}
+.profileupdateconta p{
+    line-height: 150px;
+    color:#fff;
+}

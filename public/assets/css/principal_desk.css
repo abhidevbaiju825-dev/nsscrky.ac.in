@@ -1,0 +1,124 @@
+.main-principal_desk-left{
+    width: 100%;    
+    padding:5px;
+    box-shadow: 1px 1px 2px 1px #b5b5b5;
+    -webkit-transition: all 0.2s; /* Safari */
+    transition: all 0.2s;
+}
+.main-principal_desk-right{
+    width: 100%;    
+    padding:5px;
+    box-shadow: 1px 1px 5px 1px #bababa;
+    margin-top: 8px;
+}
+.main-principal_desk-left:hover{    
+    box-shadow: 1px 1px 4px 1px #5b5b5b;
+}
+.main-principal_desk-left:hover{
+
+}
+.profile-img-princdesk{
+    width: 100%;    
+    padding: 3px;
+    position: relative;
+    min-height:220px;
+}
+.prin_title{
+    font-size: 20px;
+    color:#0a172b;
+    margin-top: 4px;
+    letter-spacing: 0.8px;    
+    text-align: center;
+    background-color: #34496b;
+    color:#fff;
+    padding:5px;
+}
+.prin_designa{
+    top: 0px;
+    position: absolute;
+    font-size: 19px;
+    color:#7a7a7a;
+    margin: 0px;
+    margin-top: 4px;
+    letter-spacing: 0.8px;    
+    text-align: right;    
+    padding:5px;
+    text-transform: uppercase;
+}
+.social_contacts{
+    margin-top: 10px;
+    margin: 5px;
+}
+.social_contacts i{
+    background-color: #3e87b7;
+    font-size: 20px;
+    padding:5px;
+    border-radius: 4px;
+    color:#fff;
+}
+.social_contacts .cphone{
+    margin-left: 5px;
+    font-size: 16px;
+    padding:3px;
+    border-radius: 4px;
+    letter-spacing: 1.3px;
+    color: #4c4c4c;
+}
+.social_contactse{
+    margin-top: 10px;
+    margin: 5px;
+}
+.social_contactse i{
+    background-color: #874848;
+    font-size: 20px;
+    padding:4px;
+    border-radius: 4px;
+    color:#fff;
+}
+.social_contactse .cemail{
+    margin-left: 5px;
+    font-size: 16px;
+    padding:3px;
+    border-radius: 4px;
+    letter-spacing: 1.5px;
+    color:#4c4c4c;
+}
+#formal_principal_table{
+    width:100%;
+    border-collapse: collapse;
+}
+#formal_principal_table th{
+    padding:3px;
+    background-color: #d1e4ff;
+    font-size: 18px;
+}
+#formal_principal_table td, th{
+    border:1px solid #4c4c4c;
+}
+#formal_principal_table td{
+    padding:3px;    
+    font-size: 15px;
+}
+#formal_principal_table tr{
+    
+}
+}
+#formal_principal_table tr:nth-child(odd){    
+    background-color: #f2f6fc!important;    
+}
+.justify-all-text{
+    
+    text-align:justify !important;
+    font-size:15px !important;
+    
+    
+    
+}
+.justify-all-text p,span,div,b{
+    
+    text-align:justify !important;
+      font-size:15px !important;
+    
+    
+    
+}

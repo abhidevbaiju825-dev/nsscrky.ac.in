@@ -1,0 +1,17 @@
+.myform_courses {
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+.mytable {
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+#table1{
+    /*width: 100%;*/
+    text-align: left;
+    border-collapse: collapse;
+}

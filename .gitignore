@@ -1,0 +1,176 @@
+#-------------------------
+# Operating Specific Junk Files
+#-------------------------
+
+# OS X
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# OS X Thumbnails
+._*
+
+# Windows image file caches
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Recycle Bin used on file shares
+$RECYCLE.BIN/
+
+# Windows Installer files
+*.cab
+*.msi
+*.msm
+*.msp
+
+# Windows shortcuts
+*.lnk
+
+# Linux
+*~
+
+# KDE directory preferences
+.directory
+
+# Linux trash folder which might appear on any partition or disk
+.Trash-*
+
+#-------------------------
+# Environment Files
+#-------------------------
+# These should never be under version control,
+# as it poses a security risk.
+.env
+.vagrant
+Vagrantfile
+
+#-------------------------
+# Temporary Files
+#-------------------------
+/writable/cache/*
+!/writable/cache/index.html
+
+/writable/logs/*
+!/writable/logs/index.html
+
+/writable/session/*
+!/writable/session/index.html
+
+/writable/uploads/*
+!/writable/uploads/index.html
+
+/writable/debugbar/*
+!/writable/debugbar/index.html
+
+php_errors.log
+
+#-------------------------
+# User Guide Temp Files
+#-------------------------
+/user_guide_src/build/*
+/user_guide_src/cilexer/build/*
+/user_guide_src/cilexer/dist/*
+/user_guide_src/cilexer/pycilexer.egg-info/*
+
+#-------------------------
+# Test Files
+#-------------------------
+/tests/coverage*
+
+# Don't save phpunit under version control.
+/phpunit
+
+#-------------------------
+# Composer
+#-------------------------
+vendor/
+
+#-------------------------
+# IDE / Development Files
+#-------------------------
+
+# Modules Testing
+_modules/*
+
+# phpenv local config
+.php-version
+
+# Jetbrains editors (PHPStorm, etc)
+.idea/
+*.iml
+
+# NetBeans
+/nbproject/
+/build/
+/nbbuild/
+/dist/
+/nbdist/
+/nbactions.xml
+/nb-configuration.xml
+/.nb-gradle/
+
+# Sublime Text
+*.tmlanguage.cache
+*.tmPreferences.cache
+*.stTheme.cache
+*.sublime-workspace
+*.sublime-project
+.phpintel
+/api/
+
+# Visual Studio Code
+.vscode/
+
+/results/
+/phpunit*.xml
+
+#-------------------------
+# User Uploaded Assets (serve from external storage, not Git)
+#-------------------------
+public/assets/idproof/
+public/assets/newreg/
+public/assets/naac2024/
+public/assets/dvv2024/
+public/assets/inte/
+public/assets/project/
+public/assets/files/
+public/assets/syllabus/
+public/assets/documents/
+public/assets/document_file/
+public/assets/teacher_register/
+public/assets/courses/
+public/assets/feedback/
+public/assets/best_practices/
+public/assets/research/
+public/assets/genderequity/
+public/assets/audit/
+public/assets/aqar23/
+public/assets/facilities/
+public/assets/report/
+public/assets/vision/
+public/assets/nsyllabus/
+public/assets/activity/
+public/assets/images/gallery_index/
+public/assets/images/gallery/
+public/assets/images/news/
+public/assets/images/events/
+public/assets/images/alumini/
+public/assets/images/alumni/
+public/assets/images/teachers/
+public/assets/images/clubandcells/
+public/assets/images/student_union/
+public/assets/images/principal/
+public/assets/images/department/
+public/assets/images/pta/
+public/assets/images/testimonials/
+public/assets/images/labs/
+public/assets/images/campus/
+public/uploads/
+
+#-------------------------
+# Stale / Junk Files
+#-------------------------
+*.zip
+nss_college_v2_academic.html
+academicb.pdf
