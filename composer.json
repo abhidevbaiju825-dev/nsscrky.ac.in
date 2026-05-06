@@ -11,6 +11,10 @@
     },
     "require": {
         "php": "^8.2",
+        "ext-intl": "*",
+        "ext-mysqli": "*",
+        "ext-mbstring": "*",
+        "ext-curl": "*",
         "codeigniter4/framework": "^4.7"
     },
     "require-dev": {
