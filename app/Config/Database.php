@@ -26,7 +26,7 @@ class Database extends Config
      */
     public array $default = [
         'DSN'          => '',
-        'hostname'     => 'mysql.railway.internal',
+        'hostname'     => 'maglev.proxy.rlwy.net',
         'username'     => 'root',
         'password'     => 'umIJHauSlkHMXKISPpGxQjxNIpRNyYTK',
         'database'     => 'railway',
@@ -41,7 +41,7 @@ class Database extends Config
         'compress'     => false,
         'strictOn'     => false,
         'failover'     => [],
-        'port'         => 3306,
+        'port'         => 15893,
         'numberNative' => false,
         'foundRows'    => false,
         'dateFormat'   => [
