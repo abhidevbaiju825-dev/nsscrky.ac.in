@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" style="overflow-x:hidden;">
 <head>
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -177,10 +177,10 @@
   </div>
 
   <!-- Mobile Nav Overlay -->
-  <div id="mob-overlay" onclick="toggleMobileNav()" style="display:none;position:absolute;top:100%;left:0;right:0;height:100vh;background:rgba(7,21,48,0.6);z-index:9997;backdrop-filter:blur(4px);transition:opacity 0.3s;"></div>
+  <div id="mob-overlay" onclick="toggleMobileNav()" style="display:none;position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(7,21,48,0.6);z-index:9997;backdrop-filter:blur(4px);transition:opacity 0.3s;"></div>
 
   <!-- Mobile Slide-out Drawer -->
-  <div id="mob-drawer" style="position:absolute;top:100%;right:-320px;width:310px;max-width:85vw;height:100vh;padding-bottom:120px;background:#fff;z-index:9998;overflow-y:auto;transition:right 0.35s cubic-bezier(.23,1,.32,1);box-shadow:-8px 0 40px rgba(0,0,0,0.2);">
+  <div id="mob-drawer" style="position:fixed;top:0;right:0;width:310px;max-width:85vw;height:100vh;padding-bottom:120px;background:#fff;z-index:9998;overflow-y:auto;transform:translateX(100%);transition:transform 0.35s cubic-bezier(.23,1,.32,1);box-shadow:-8px 0 40px rgba(0,0,0,0.2);">
 
     <!-- Navigation Links -->
     <div style="padding:8px 0;">
@@ -380,13 +380,13 @@
     drawerOpen = !drawerOpen;
     
     if (drawerOpen) {
-      drawer.style.right = '0';
+      drawer.style.transform = 'translateX(0)';
       overlay.style.display = 'block';
       document.body.style.overflow = 'hidden';
       iconMenu.style.display = 'none';
       iconClose.style.display = 'block';
     } else {
-      drawer.style.right = '-320px';
+      drawer.style.transform = 'translateX(100%)';
       overlay.style.display = 'none';
       document.body.style.overflow = '';
       iconMenu.style.display = 'block';
