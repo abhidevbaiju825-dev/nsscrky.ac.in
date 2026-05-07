@@ -22,7 +22,7 @@
     <!-- Image -->
     <div>
       <div style="border-radius:12px;overflow:hidden;box-shadow:0 4px 20px rgba(0,0,0,0.08);border:2px solid rgba(184,146,42,0.15);">
-        <img src="<?= !empty($news_detail['_imgloc']) ? base_url($news_detail['_imgloc']) : base_url('assets/images/bg_default.png') ?>" alt="" style="width:100%;height:auto;display:block;">
+        <img src="<?= !empty($news_detail['_imgloc']) ? base_url($news_detail['_imgloc']) : base_url('uploads/static/bg_default.png') ?>" alt="" style="width:100%;height:auto;display:block;">
       </div>
     </div>
     <!-- Content -->

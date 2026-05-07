@@ -269,7 +269,7 @@
             <div class="modal-dialog" role="document" data-dismiss="modal">
                 <div class="close-mo-video-01 trans-04" data-dismiss="modal" aria-label="Close">&times;</div>
                 <div class="wrap-video-mo-01">
-                    <div class="w-full wrap-pic-w op-00"><img src="<?php echo base_url();?>/assets/images/icons/video-16-9.jpg" alt="IMG"></div>
+                    <div class="w-full wrap-pic-w op-00"><img src="<?php echo base_url();?>/uploads/static/icons/video-16-9.jpg" alt="IMG"></div>
                     <div class="video-mo-01">
                         <iframe src="https://www.youtube.com/embed/KNJuo27MJ3E?rel=0&amp;showinfo=0" allowfullscreen></iframe>
                     </div>

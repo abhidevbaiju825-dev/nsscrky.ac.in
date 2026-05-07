@@ -106,8 +106,8 @@ class Home extends BaseController {
             if ($slide['template_type'] === 'ranklist' && isset($slide['extra_data']['dynamic_students'])) {
                 // If dynamic, give it mock students so the admin sees the layout
                 $slide['students'] = [
-                    ['name' => 'Demo Student', 'rank' => '1st', 'image' => base_url('assets/images/avatar.png'), 'department' => 'BBA'],
-                    ['name' => 'Demo Student 2', 'rank' => '2nd', 'image' => base_url('assets/images/avatar.png'), 'department' => 'B.Com']
+                    ['name' => 'Demo Student', 'rank' => '1st', 'image' => base_url('uploads/static/avatar.png'), 'department' => 'BBA'],
+                    ['name' => 'Demo Student 2', 'rank' => '2nd', 'image' => base_url('uploads/static/avatar.png'), 'department' => 'B.Com']
                 ];
             }
         }
@@ -185,7 +185,7 @@ class Home extends BaseController {
         $all_teacher_list = $builder->get()->getResultArray();
 
         foreach ($all_teacher_list as &$t) {
-            $t['_profile_pic'] = !empty($t['_imgloc']) ? base_url($t['_imgloc']) : base_url('assets/images/avatar.png');
+            $t['_profile_pic'] = !empty($t['_imgloc']) ? base_url($t['_imgloc']) : base_url('uploads/static/avatar.png');
         }
 
         $data['_staff_list'] = $staff_list;
@@ -249,7 +249,7 @@ class Home extends BaseController {
             ->where('_teacher_id', $teacher_id)
             ->get()->getRowArray();
         if ($teacher) {
-            $teacher['_profile_pic'] = !empty($teacher['_imgloc']) ? base_url($teacher['_imgloc']) : base_url('assets/images/avatar.png');
+            $teacher['_profile_pic'] = !empty($teacher['_imgloc']) ? base_url($teacher['_imgloc']) : base_url('uploads/static/avatar.png');
             $teacher['array_paper_published'] = [];
         }
         $data['teacher_data'] = $teacher ?: [];
@@ -271,7 +271,7 @@ class Home extends BaseController {
             ->get()->getResultArray();
 
         foreach ($teachers as &$t) {
-            $t['_profile_pic'] = !empty($t['_imgloc']) ? base_url($t['_imgloc']) : base_url('assets/images/avatar.png');
+            $t['_profile_pic'] = !empty($t['_imgloc']) ? base_url($t['_imgloc']) : base_url('uploads/static/avatar.png');
             $t['array_paper_published'] = [];
         }
 

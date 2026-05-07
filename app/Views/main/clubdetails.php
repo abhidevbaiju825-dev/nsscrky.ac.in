@@ -61,7 +61,7 @@
           <div class="grid md:grid-cols-3 sm:grid-cols-2 gap-6">
             <?php foreach($val['members'] as $row): ?>
             <div style="background:#fff;border-radius:16px;padding:20px;border:1px solid #eee;display:flex;align-items:center;gap:16px;box-shadow:0 4px 15px rgba(0,0,0,0.03);transition:all 0.2s;" onmouseover="this.style.borderColor='#b8922a';this.style.transform='translateY(-2px)'" onmouseout="this.style.borderColor='#eee';this.style.transform='none'">
-              <img src="<?= empty($row['acc_data']['_imgloc']) ? base_url('assets/images/avatar.png') : base_url($row['acc_data']['_imgloc']) ?>" alt="<?= $row['org_name'] ?>" style="width:60px;height:60px;border-radius:50%;object-fit:cover;border:2px solid #f0f0f0;">
+              <img src="<?= empty($row['acc_data']['_imgloc']) ? base_url('uploads/static/avatar.png') : base_url($row['acc_data']['_imgloc']) ?>" alt="<?= $row['org_name'] ?>" style="width:60px;height:60px;border-radius:50%;object-fit:cover;border:2px solid #f0f0f0;">
               <div>
                 <a href="<?= !empty($row['acc_data']['_teacher_id']) ? site_url('Home/view_teacher_detail/'.$row['acc_data']['_teacher_id']) : '#' ?>" style="font-weight:700;color:#0d2448;font-size:14px;text-decoration:none;" class="hover:text-gold-600">
                   <?= $row['org_name'] ?>

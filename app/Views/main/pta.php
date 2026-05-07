@@ -32,7 +32,7 @@
         <h3 style="font-family:'Cinzel',serif;font-size:18px;color:#0d2448;font-weight:600;border-bottom:2px solid #eee;padding-bottom:10px;">PTA Leadership</h3>
         <?php foreach ($president as $row): ?>
           <div style="background:#fff;border-radius:12px;padding:16px;border:1px solid #eee;display:flex;align-items:center;gap:16px;">
-            <img src="<?= $row['image'] ? base_url($row['image']) : base_url('assets/images/avatar.png'); ?>" alt="President" style="width:60px;height:60px;border-radius:50%;object-fit:cover;border:2px solid #f0f0f0;">
+            <img src="<?= $row['image'] ? base_url($row['image']) : base_url('uploads/static/avatar.png'); ?>" alt="President" style="width:60px;height:60px;border-radius:50%;object-fit:cover;border:2px solid #f0f0f0;">
             <div>
               <div style="font-weight:700;color:#0d2448;font-size:14px;"><?= esc($row['title']); ?></div>
               <div style="font-size:11px;color:#b8922a;font-weight:600;">President</div>
@@ -41,7 +41,7 @@
         <?php endforeach; ?>
         <?php foreach ($secretary as $row): ?>
           <div style="background:#fff;border-radius:12px;padding:16px;border:1px solid #eee;display:flex;align-items:center;gap:16px;">
-            <img src="<?= $row['image'] ? base_url($row['image']) : base_url('assets/images/avatar.png'); ?>" alt="Secretary" style="width:60px;height:60px;border-radius:50%;object-fit:cover;border:2px solid #f0f0f0;">
+            <img src="<?= $row['image'] ? base_url($row['image']) : base_url('uploads/static/avatar.png'); ?>" alt="Secretary" style="width:60px;height:60px;border-radius:50%;object-fit:cover;border:2px solid #f0f0f0;">
             <div>
               <div style="font-weight:700;color:#0d2448;font-size:14px;"><?= esc($row['title']); ?></div>
               <div style="font-size:11px;color:#b8922a;font-weight:600;">Secretary</div>
@@ -58,7 +58,7 @@
       <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-6">
         <?php foreach ($incharge as $row): ?>
         <div style="background:#fff;border-radius:16px;padding:20px;border:1px solid #eee;text-align:center;box-shadow:0 4px 15px rgba(0,0,0,0.03);">
-          <img src="<?= $row['image'] ? base_url($row['image']) : base_url('assets/images/avatar.png'); ?>" alt="<?= $row['title'] ?>" style="width:80px;height:80px;border-radius:50%;margin:0 auto 12px;object-fit:cover;border:2px solid #f0f0f0;">
+          <img src="<?= $row['image'] ? base_url($row['image']) : base_url('uploads/static/avatar.png'); ?>" alt="<?= $row['title'] ?>" style="width:80px;height:80px;border-radius:50%;margin:0 auto 12px;object-fit:cover;border:2px solid #f0f0f0;">
           <div style="font-weight:700;color:#0d2448;font-size:14px;"><?= esc($row['title']); ?></div>
           <div style="font-size:11px;color:#b8922a;margin-top:2px;"><?= esc($row['designation']); ?></div>
         </div>

@@ -29,7 +29,7 @@
     <div class="<?= $hasSidebar ? 'lg:col-span-2' : '' ?> space-y-10">
       <div style="background:#fff;border-radius:20px;padding:40px;box-shadow:0 4px 25px rgba(0,0,0,0.05);border:1px solid #f0f0f0;">
         <div style="display:flex;align-items:center;gap:16px;margin-bottom:24px;">
-          <img src="<?= base_url('assets/images/nss_logo.png'); ?>" style="width:40px; height:40px;" alt="NSS Logo" onerror="this.style.display='none'">
+          <img src="<?= base_url('uploads/static/nss_logo.png'); ?>" style="width:40px; height:40px;" alt="NSS Logo" onerror="this.style.display='none'">
           <h2 style="font-family:'Cinzel',serif;font-size:20px;color:#0d2448;font-weight:700;">Unit Mission & Vision</h2>
         </div>
         <div style="line-height:1.8;color:#444;font-size:16px;text-align:justify;" class="space-y-6">
@@ -90,7 +90,7 @@
       <?php foreach($nss_incharge as $val): if($val['_designation']==="Program Co-ordinator"): ?>
       <div style="background:#fff;border-radius:20px;overflow:hidden;box-shadow:0 10px 30px rgba(0,0,0,0.05);border:1px solid #eee;text-align:center;">
         <div style="padding:40px 20px;">
-          <img src="<?= !empty($val['_imgloc']) ? base_url($val['_imgloc']) : base_url('assets/images/avatar.png') ?>" alt="<?= $val['_name'] ?>" style="width:120px;height:120px;border-radius:50%;object-fit:cover;margin:0 auto 20px;border:4px solid #f8fafc;box-shadow:0 4px 15px rgba(0,0,0,0.1);">
+          <img src="<?= !empty($val['_imgloc']) ? base_url($val['_imgloc']) : base_url('uploads/static/avatar.png') ?>" alt="<?= $val['_name'] ?>" style="width:120px;height:120px;border-radius:50%;object-fit:cover;margin:0 auto 20px;border:4px solid #f8fafc;box-shadow:0 4px 15px rgba(0,0,0,0.1);">
           <div style="font-family:'Cinzel',serif;font-size:12px;font-weight:800;color:#b8922a;text-transform:uppercase;letter-spacing:0.1em;margin-bottom:8px;">Programme Coordinator</div>
           <h4 style="font-size:18px;font-weight:700;color:#0d2448;margin-bottom:4px;"><?= $val['_name'] ?></h4>
           <p style="font-size:13px;color:#666;line-height:1.5;"><?= $val['_details'] ?></p>

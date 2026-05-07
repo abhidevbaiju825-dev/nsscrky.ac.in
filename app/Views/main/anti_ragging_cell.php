@@ -68,7 +68,7 @@
       <?php if ($anti_ragging && $anti_ragging['incharge_name']): ?>
         <h3 style="font-family:'Cinzel',serif;font-size:18px;color:#0d2448;font-weight:600;border-bottom:2px solid #eee;padding-bottom:10px;">Cell Incharge</h3>
         <div style="background:#fff;border-radius:16px;overflow:hidden;box-shadow:0 10px 30px rgba(0,0,0,0.05);border:1px solid #eee;">
-          <img src="<?= $anti_ragging['incharge_image'] ? base_url($anti_ragging['incharge_image']) : base_url('assets/images/avatar.png'); ?>" alt="Incharge" style="width:100%; height:260px; object-fit: cover;">
+          <img src="<?= $anti_ragging['incharge_image'] ? base_url($anti_ragging['incharge_image']) : base_url('uploads/static/avatar.png'); ?>" alt="Incharge" style="width:100%; height:260px; object-fit: cover;">
           <div style="padding:20px;text-align:center;">
             <div style="font-weight:700;color:#0d2448;font-size:16px;"><?= esc($anti_ragging['incharge_name']); ?></div>
             <div style="font-size:12px;color:#b8922a;font-weight:600;margin-top:4px;">Anti-Ragging Cell Incharge</div>

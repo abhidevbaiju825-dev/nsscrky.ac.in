@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="NSS College Rajakumari was established and started functioning as a First grade degree college in the year 1995..." />
     
-    <link rel="icon" type="image/png" href="<?= base_url('assets/images/icons/favicon.png') ?>"/>
+    <link rel="icon" type="image/png" href="<?= base_url('uploads/static/icons/favicon.png') ?>"/>
     <link rel="stylesheet" type="text/css" href="<?= base_url('assets/vendor/bootstrap/css/bootstrap.min.css') ?>">
     <link rel="stylesheet" type="text/css" href="<?= base_url('assets/fonts/font-awesome-4.7.0/css/font-awesome.min.css') ?>">
     <link rel="stylesheet" type="text/css" href="<?= base_url('assets/fonts/elegant-font/html-css/style.css') ?>">
@@ -42,7 +42,7 @@
             <div class="row">
                 <div class="col-sm-12 col-lg-3 p-t-10">
                     <div class="">
-                        <a href="<?= base_url('/') ?>"><img class="footer-img-main" src="<?= base_url('assets/images/icons/logo-02.png') ?>" alt="LOGO"></a>
+                        <a href="<?= base_url('/') ?>"><img class="footer-img-main" src="<?= base_url('uploads/static/icons/logo-02.png') ?>" alt="LOGO"></a>
                     </div>
                     <p class="s-txt9 p-t-10 customer-text_confoot">
                         The N.S.S. College, Rajakumari got established and started functioning in June 1995. It is one among several prestigious centres of higher education under the auspices of Nair Service Society...

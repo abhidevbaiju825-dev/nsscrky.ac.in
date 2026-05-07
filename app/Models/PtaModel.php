@@ -197,7 +197,7 @@ class PtaModel extends Model {
         $ans = array();
         foreach($query->getResultArray() as $row){
             if($row['_imgloc'] == ""){
-                $row['_imgloc'] = 'assets/images/default.jpg';
+                $row['_imgloc'] = 'uploads/static/default.jpg';
             }
             $ans = $row;
         }

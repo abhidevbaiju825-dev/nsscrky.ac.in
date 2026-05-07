@@ -82,7 +82,7 @@
  
                                                 </div>
                                                  <?php } else{?>
-                                                <img  class="rounded" id="brsbtn" src="<?php echo base_url('assets/images/avatar.png'); ?>" style="width: 140px;height: 112px;border-radius: 50%">
+                                                <img  class="rounded" id="brsbtn" src="<?php echo base_url('uploads/static/avatar.png'); ?>" style="width: 140px;height: 112px;border-radius: 50%">
                                      <input  type="file"  name="teacherimg" id="teacherimg" style="display:none;" >
                                         
                                                  <?php } ?>

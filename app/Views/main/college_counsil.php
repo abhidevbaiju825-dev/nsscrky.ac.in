@@ -33,7 +33,7 @@
         <div class="space-y-4">
           <?php if(isset($counsil_members)): foreach($counsil_members as $row): ?>
           <div style="display:flex;align-items:center;gap:12px;padding:12px;background:#fff;border-radius:10px;border:1px solid #eee;transition:all 0.2s;" onmouseover="this.style.borderColor='#b8922a'" onmouseout="this.style.borderColor='#eee'">
-            <img src="<?= !empty($row['_imgloc']) ? base_url($row['_imgloc']) : base_url('assets/images/avatar.png') ?>" alt="<?= $row['_name'] ?>" style="width:50px;height:50px;border-radius:50%;object-fit:cover;border:2px solid #f0f0f0;">
+            <img src="<?= !empty($row['_imgloc']) ? base_url($row['_imgloc']) : base_url('uploads/static/avatar.png') ?>" alt="<?= $row['_name'] ?>" style="width:50px;height:50px;border-radius:50%;object-fit:cover;border:2px solid #f0f0f0;">
             <div>
               <div style="font-weight:700;color:#0d2448;font-size:14px;"><?= $row['_name'] ?></div>
               <div style="font-size:11px;color:#b8922a;font-weight:600;"><?= $row['_designation'] ?></div>

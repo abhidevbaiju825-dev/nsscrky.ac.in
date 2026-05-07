@@ -58,7 +58,7 @@
         <label>Upload Photo</label>
         <div class="col-xs-12 col-sm-12 col-md-12">
         <input name="teacherimg" id="teacherimg" type="file" class="" style="display:none;" >
-        <img class="rounded" id="brsbtn" src="<?php echo base_url('assets/images/avatar.png');?>" style="width: 124px;height: 112px;border-radius: 13px;">
+        <img class="rounded" id="brsbtn" src="<?php echo base_url('uploads/static/avatar.png');?>" style="width: 124px;height: 112px;border-radius: 13px;">
     </div>
     </div>
 

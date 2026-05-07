@@ -27,7 +27,7 @@ class ClubModel extends Model {
         $activities = $builder->get()->getResultArray();
         foreach ($activities as &$row) {
             if (empty($row['_imgloc'])) {
-                $row['_imgloc'] = 'assets/images/default.jpg';
+                $row['_imgloc'] = 'uploads/static/default.jpg';
             }
         }
         return $activities;
