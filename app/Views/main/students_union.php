@@ -115,7 +115,7 @@
       <div style="background:#fff;border-radius:14px;padding:28px 20px;box-shadow:0 2px 15px rgba(0,0,0,0.06);border:1px solid #eee;text-align:center;margin-bottom:20px;">
         <div style="font-family:'Cinzel',serif;font-size:10px;letter-spacing:0.18em;text-transform:uppercase;color:#b8922a;margin-bottom:14px;">Staff Advisor</div>
         <div style="width:120px;height:120px;border-radius:50%;overflow:hidden;margin:0 auto 12px;border:3px solid rgba(184,146,42,0.3);box-shadow:0 4px 15px rgba(0,0,0,0.1);">
-          <img src="<?= empty($incharge['_imgloc']) ? base_url('assets/images/avatar.png') : base_url($incharge['_imgloc']) ?>" alt="" style="width:100%;height:100%;object-fit:cover;">
+          <img src="<?= empty($incharge['_imgloc']) ? base_url('uploads/static/avatar.png') : base_url($incharge['_imgloc']) ?>" alt="" style="width:100%;height:100%;object-fit:cover;">
         </div>
         <h4 style="font-size:15px;font-weight:600;color:#0d2448;"><?= esc($incharge['_name']) ?></h4>
         <p style="font-size:12px;color:#b8922a;margin-top:2px;"><?= esc($incharge['_designation']) ?></p>

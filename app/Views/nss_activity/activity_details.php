@@ -51,7 +51,7 @@
                         </div>
                     </div>
                     <div class="p-r-20 p-r-0-md">
-                        <!-- <div class="wrap-pic-w bo2-b"> <img src="<?php //if(!empty($activity->_imgloc)){ echo base_url($activity->_imgloc); } else{ echo base_url('assets/images/bg_default.png');}?>" alt="IMG-COURSE" style="width:250px;height:189px;border: 1px solid #c7c7c7;"> </div> -->
+                        <!-- <div class="wrap-pic-w bo2-b"> <img src="<?php //if(!empty($activity->_imgloc)){ echo base_url($activity->_imgloc); } else{ echo base_url('uploads/static/bg_default.png');}?>" alt="IMG-COURSE" style="width:250px;height:189px;border: 1px solid #c7c7c7;"> </div> -->
                     </div>
                 </div>
                 <div class="col-sm-12 col-md-11 col-lg-11 m-lr-auto">
@@ -77,7 +77,7 @@
                         </div>
                     </div>
                     <div class="p-r-20 p-r-0-md">
-                        <!-- <div class="wrap-pic-w bo2-b"> <img src="<?php //if(!empty($news->_imgloc)){ echo base_url($news->_imgloc); } else{ echo base_url('assets/images/bg_default.png');}?>" alt="IMG-COURSE" style="width:250px;height:189px;border: 1px solid #c7c7c7;"> </div>
+                        <!-- <div class="wrap-pic-w bo2-b"> <img src="<?php //if(!empty($news->_imgloc)){ echo base_url($news->_imgloc); } else{ echo base_url('uploads/static/bg_default.png');}?>" alt="IMG-COURSE" style="width:250px;height:189px;border: 1px solid #c7c7c7;"> </div>
                         </div> -->
                     </div>
                     <div class="col-sm-12 col-md-11 col-lg-11 m-lr-auto p-b-50">

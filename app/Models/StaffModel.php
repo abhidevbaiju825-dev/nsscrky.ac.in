@@ -70,7 +70,7 @@ class StaffModel extends Model {
         if($query->num_rows()>0){
             $row = $query->getResultArray()[0];
             $row['array_paper_published'] = $this->get_paper_published_details($row['_teacher_id']);
-            $row['_profile_pic'] = base_url('assets/images/avatar.png');
+            $row['_profile_pic'] = base_url('uploads/static/avatar.png');
             if($row['_imgloc'] != ""){
                 $row['_profile_pic'] = base_url($row['_imgloc']);
             }
@@ -191,7 +191,7 @@ class StaffModel extends Model {
         $ans = array();
         foreach($query->getResultArray() as $row){
             if($row['_imgloc'] == ""){
-                $row['_imgloc'] = 'assets/images/default.jpg';
+                $row['_imgloc'] = 'uploads/static/default.jpg';
             }
             $ans = $row;
         }
@@ -364,7 +364,7 @@ class StaffModel extends Model {
         $ans = array();
         foreach($query->getResultArray() as $row){
             $row['array_paper_published'] = $this->get_paper_published_details($row['_teacher_id']);
-            $row['_profile_pic'] = base_url('assets/images/avatar.png');
+            $row['_profile_pic'] = base_url('uploads/static/avatar.png');
             if($row['_imgloc'] != ""){
                 $row['_profile_pic'] = base_url($row['_imgloc']);
             }

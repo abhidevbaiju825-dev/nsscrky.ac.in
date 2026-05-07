@@ -10,7 +10,7 @@
 
 <section class="max-w-screen-xl mx-auto px-4 py-14">
   <div style="background:#fff;border-radius:14px;padding:24px;box-shadow:0 4px 20px rgba(0,0,0,0.06);border:1px solid #eee;text-align:center;">
-    <img src="<?= base_url('assets/images/organogram.jpg') ?>" alt="Organogram" style="width:100%;max-width:900px;height:auto;border-radius:8px;">
+    <img src="<?= base_url('uploads/static/organogram.jpg') ?>" alt="Organogram" style="width:100%;max-width:900px;height:auto;border-radius:8px;">
   </div>
 </section>
 

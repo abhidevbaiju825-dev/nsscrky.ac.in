@@ -25,7 +25,7 @@
     <?php foreach($_all_teacher_list as $row): ?>
     <a href="<?= site_url('Home/view_teacher_detail/'.$row['_teacher_id']) ?>" style="text-decoration:none;display:block;text-align:center;background:#fff;border-radius:14px;padding:28px 16px;box-shadow:0 2px 12px rgba(0,0,0,0.05);border:1px solid #f0f0f0;transition:all 0.25s;" onmouseover="this.style.transform='translateY(-5px)';this.style.boxShadow='0 10px 30px rgba(13,36,72,0.12)';this.style.borderColor='rgba(184,146,42,0.3)'" onmouseout="this.style.transform='';this.style.boxShadow='0 2px 12px rgba(0,0,0,0.05)';this.style.borderColor='#f0f0f0'">
       <div style="width:120px;height:120px;border-radius:50%;overflow:hidden;margin:0 auto 14px;border:3px solid rgba(184,146,42,0.25);">
-        <img src="<?= ($row['_imgloc'] == '') ? base_url('assets/images/avatar.png') : base_url($row['_imgloc']) ?>" alt="" style="width:100%;height:100%;object-fit:cover;">
+        <img src="<?= ($row['_imgloc'] == '') ? base_url('uploads/static/avatar.png') : base_url($row['_imgloc']) ?>" alt="" style="width:100%;height:100%;object-fit:cover;">
       </div>
       <h4 style="font-size:14px;font-weight:600;color:#0d2448;margin-bottom:4px;"><?= esc($row['_name']) ?></h4>
       <p style="font-size:12px;color:#b8922a;margin-bottom:8px;letter-spacing:0.03em;"><?= esc($row['_designation']) ?></p>

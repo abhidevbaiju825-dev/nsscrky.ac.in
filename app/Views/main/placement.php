@@ -31,7 +31,7 @@
         <div class="grid grid-cols-1 gap-6">
           <?php foreach($incharge_list as $row): ?>
           <div style="background:#fff;border-radius:12px;padding:20px;border:1px solid #eee;display:flex;align-items:center;gap:16px;box-shadow:0 4px 15px rgba(0,0,0,0.03);">
-            <img src="<?= $row['_imgloc'] ? base_url($row['_imgloc']) : base_url('assets/images/avatar.png') ?>" alt="<?= $row['_name'] ?>" style="width:70px;height:70px;border-radius:50%;object-fit:cover;border:2px solid #f0f0f0;">
+            <img src="<?= $row['_imgloc'] ? base_url($row['_imgloc']) : base_url('uploads/static/avatar.png') ?>" alt="<?= $row['_name'] ?>" style="width:70px;height:70px;border-radius:50%;object-fit:cover;border:2px solid #f0f0f0;">
             <div>
               <div style="font-weight:700;color:#0d2448;font-size:15px;"><?= $row['_name'] ?></div>
               <div style="font-size:12px;color:#b8922a;font-weight:600;margin-top:2px;"><?= $row['_designation'] ?></div>
@@ -91,7 +91,7 @@
       <h3 style="font-family:'Cinzel',serif;font-size:22px;color:#0d2448;font-weight:600;margin-bottom:32px;text-align:center;">Our Top Recruiters</h3>
       <div class="flex flex-wrap justify-center gap-8 opacity-70">
         <?php for($i=11; $i<=14; $i++): ?>
-          <img src="<?= base_url('assets/images/'.$i.'.jpg') ?>" alt="Recruiter" style="height:50px;filter:grayscale(100%);transition:all 0.3s;" onmouseover="this.style.filter='none';this.style.opacity='1'" onmouseout="this.style.filter='grayscale(100%)';this.style.opacity='0.7'">
+          <img src="<?= base_url('uploads/static/recruiters/'.$i.'.jpg') ?>" alt="Recruiter" style="height:50px;filter:grayscale(100%);transition:all 0.3s;" onmouseover="this.style.filter='none';this.style.opacity='1'" onmouseout="this.style.filter='grayscale(100%)';this.style.opacity='0.7'">
         <?php endfor; ?>
       </div>
     </div>

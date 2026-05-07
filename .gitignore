@@ -126,8 +126,43 @@ _modules/*
 /phpunit*.xml
 
 #-------------------------
-# User Uploaded Assets (serve from external storage, not Git)
+# Tailwind Build Tools
 #-------------------------
+tailwindcss.exe
+
+#-------------------------
+# User Uploaded Content (serve from persistent storage, not Git)
+#-------------------------
+
+# User uploads (dynamic content — not tracked)
+public/uploads/*
+!public/uploads/static/
+public/uploads/static/alumini/
+public/uploads/static/alumni/
+public/uploads/static/antiraggingcell/
+public/uploads/static/campus/
+public/uploads/static/clubandcells/
+public/uploads/static/courses/
+public/uploads/static/department/
+public/uploads/static/documents/
+public/uploads/static/events/
+public/uploads/static/gallery/
+public/uploads/static/gallery_index/
+public/uploads/static/labs/
+public/uploads/static/naac/
+public/uploads/static/ncc_incharge/
+public/uploads/static/news/
+public/uploads/static/notice_pdf/
+public/uploads/static/placementcell/
+public/uploads/static/principal/
+public/uploads/static/pta/
+public/uploads/static/rankholder/
+public/uploads/static/student_union/
+public/uploads/static/teachers/
+public/uploads/static/testimonials/
+public/uploads/static/recruiters/
+
+# Admin uploaded documents & media (in assets/)
 public/assets/idproof/
 public/assets/newreg/
 public/assets/naac2024/
@@ -151,32 +186,9 @@ public/assets/report/
 public/assets/vision/
 public/assets/nsyllabus/
 public/assets/activity/
-public/assets/images/gallery_index/
-public/assets/images/gallery/
-public/assets/images/news/
-public/assets/images/events/
-public/assets/images/alumini/
-public/assets/images/alumni/
-public/assets/images/teachers/
-public/assets/images/clubandcells/
-public/assets/images/student_union/
-public/assets/images/principal/
-public/assets/images/department/
-public/assets/images/pta/
-public/assets/images/testimonials/
-public/assets/images/labs/
-public/assets/images/campus/
-
+public/assets/img/
 
 #-------------------------
-# Stale / Junk Files
+# Misc
 #-------------------------
 *.zip
-nss_college_v2_academic.html
-academicb.pdf
-
-#-------------------------
-# Tailwind Build Tools
-#-------------------------
-tailwindcss.exe
-public/assets/css/tailwind-input.css

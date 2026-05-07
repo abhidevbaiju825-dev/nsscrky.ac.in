@@ -582,7 +582,7 @@ class Adminaccess_model extends Model{
         $i=0;
         foreach($query->getResultArray() as $row){
             if($row['_imgloc'] == ""){
-                $row['_imgloc'] = 'assets/images/bg_default.png';
+                $row['_imgloc'] = 'uploads/static/bg_default.png';
             }
             $ans[$i++] = $row;
         }

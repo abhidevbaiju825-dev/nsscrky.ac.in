@@ -14,7 +14,7 @@
     <?php foreach($news_list as $row): ?>
     <a href="<?= base_url('Home/newsdetails/'.$row['_newsid']) ?>" style="text-decoration:none;display:flex;gap:20px;align-items:center;padding:20px;background:#fff;border-radius:12px;border:1px solid #eee;box-shadow:0 2px 10px rgba(0,0,0,0.04);transition:all 0.2s;" onmouseover="this.style.boxShadow='0 6px 20px rgba(13,36,72,0.1)';this.style.borderColor='rgba(184,146,42,0.3)'" onmouseout="this.style.boxShadow='0 2px 10px rgba(0,0,0,0.04)';this.style.borderColor='#eee'">
       <div style="width:80px;height:80px;border-radius:10px;overflow:hidden;flex-shrink:0;border:2px solid #f0f0f0;">
-        <img src="<?= !empty($row['_imgloc']) ? base_url($row['_imgloc']) : base_url('assets/images/bg_default.png') ?>" alt="" style="width:100%;height:100%;object-fit:cover;">
+        <img src="<?= !empty($row['_imgloc']) ? base_url($row['_imgloc']) : base_url('uploads/static/bg_default.png') ?>" alt="" style="width:100%;height:100%;object-fit:cover;">
       </div>
       <div style="flex:1;min-width:0;">
         <h3 style="font-size:16px;font-weight:600;color:#0d2448;margin-bottom:6px;"><?= esc($row['_newsheading']) ?></h3>

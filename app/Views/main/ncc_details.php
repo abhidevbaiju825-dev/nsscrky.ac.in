@@ -61,7 +61,7 @@
         <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           <?php foreach ($ncc_mem as $mem_ncc): if(strtolower($mem_ncc['_type']) == 'incharge'): ?>
           <div style="background:#fff;border-radius:16px;padding:20px;border:1px solid #eee;display:flex;align-items:center;gap:16px;box-shadow:0 4px 15px rgba(0,0,0,0.03);transition:all 0.2s;" onmouseover="this.style.borderColor='#b8922a';this.style.transform='translateY(-3px)'" onmouseout="this.style.borderColor='#eee';this.style.transform='none'">
-            <img src="<?= !empty($mem_ncc['_profile_pic']) ? base_url($mem_ncc['_profile_pic']) : base_url('assets/images/avatar.png') ?>" alt="<?= $mem_ncc['_name'] ?>" style="width:70px;height:70px;border-radius:50%;object-fit:cover;border:3px solid #f0f0f0;">
+            <img src="<?= !empty($mem_ncc['_profile_pic']) ? base_url($mem_ncc['_profile_pic']) : base_url('uploads/static/avatar.png') ?>" alt="<?= $mem_ncc['_name'] ?>" style="width:70px;height:70px;border-radius:50%;object-fit:cover;border:3px solid #f0f0f0;">
             <div>
               <div style="font-weight:700;color:#0d2448;font-size:15px;"><?= $mem_ncc['_name'] ?></div>
               <div style="font-size:12px;color:#b8922a;font-weight:600;margin-top:2px;"><?= $mem_ncc['_designation'] ?></div>
@@ -79,7 +79,7 @@
         <div class="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
           <?php foreach ($ncc_mem as $mem_ncc_de): if(strtolower($mem_ncc_de['_type']) == 'member'): ?>
           <div style="background:#fff;border-radius:16px;padding:20px;border:1px solid #eee;text-align:center;transition:all 0.2s;box-shadow:0 4px 15px rgba(0,0,0,0.03);" onmouseover="this.style.borderColor='#b8922a';this.style.transform='translateY(-5px)';this.style.boxShadow='0 12px 30px rgba(184,146,42,0.12)'" onmouseout="this.style.borderColor='#eee';this.style.transform='none';this.style.boxShadow='0 4px 15px rgba(0,0,0,0.03)'">
-            <img src="<?= !empty($mem_ncc_de['_profile_pic']) ? base_url($mem_ncc_de['_profile_pic']) : base_url('assets/images/avatar.png') ?>" alt="<?= $mem_ncc_de['_name'] ?>" style="width:80px;height:80px;border-radius:50%;object-fit:cover;margin:0 auto 12px;border:3px solid #f8fafc;">
+            <img src="<?= !empty($mem_ncc_de['_profile_pic']) ? base_url($mem_ncc_de['_profile_pic']) : base_url('uploads/static/avatar.png') ?>" alt="<?= $mem_ncc_de['_name'] ?>" style="width:80px;height:80px;border-radius:50%;object-fit:cover;margin:0 auto 12px;border:3px solid #f8fafc;">
             <div style="font-weight:700;color:#0d2448;font-size:14px;"><?= $mem_ncc_de['_name'] ?></div>
             <div style="font-size:11px;color:#666;margin-top:4px;"><?= $mem_ncc_de['_designation'] ?></div>
           </div>

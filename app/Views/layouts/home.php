@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>NSS College Rajakumari — Excellence in Higher Education Since 1995</title>
     <meta name="description" content="NSS College Rajakumari — A premier institution affiliated to Mahatma Gandhi University, Kottayam. Offering BBA, BCA, B.Sc Electronics, B.Com programmes in the High Ranges of Kerala."/>
-    <link rel="icon" type="image/png" href="<?= base_url('assets/images/icons/favicon.png') ?>"/>
+    <link rel="icon" type="image/png" href="<?= base_url('uploads/static/icons/favicon.png') ?>"/>
 
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Outfit:wght@300;400;500;600;700&family=Cinzel:wght@400;500;600&display=swap" rel="stylesheet"/>
