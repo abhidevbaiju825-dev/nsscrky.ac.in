@@ -20,9 +20,8 @@ Edit RTI Item
 
     <div class="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden">
         <div class="p-6">
-            <form action="<?= base_url('AdminPortal/rti/update/' . $item['id']) ?>
-    <?= csrf_field() ?>
-" method="post" class="space-y-6">
+            <form action="<?= base_url('AdminPortal/rti/update/' . $item['id']) ?>" method="post" class="space-y-6">
+                <?= csrf_field() ?>
 
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>

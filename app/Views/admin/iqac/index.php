@@ -123,11 +123,9 @@ IQAC Management
                 </h5>
             </div>
             <div class="p-6">
-                <form action="<?= base_url('AdminPortal/iqac/saveSettings') ?>
-    <?= csrf_field() ?>
-" method="post" class="space-y-6">
+                <form action="<?= base_url('AdminPortal/iqac/saveSettings') ?>" method="post" class="space-y-6">
                     <?= csrf_field() ?>
-<div>
+                    <div>
                         <label class="block text-xs font-bold text-gray-500 uppercase tracking-wider mb-2">About IQAC Text</label>
                         <textarea name="about_text" rows="5" class="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-nss-gold focus:ring-2 focus:ring-nss-gold/20 outline-none transition-all text-sm leading-relaxed" placeholder="Enter introductory paragraph..."><?= esc($settings['about_text'] ?? '') ?></textarea>
                         <p class="mt-1.5 text-[10px] text-gray-400 italic">This content appears as the main introduction on the IQAC public page.</p>

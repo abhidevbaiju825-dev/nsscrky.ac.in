@@ -16,11 +16,9 @@ Student Grievance Cell
             </h3>
         </div>
         <div class="p-6">
-            <form action="<?= base_url('AdminPortal/grievance/update') ?>
-    <?= csrf_field() ?>
-" method="post" class="space-y-4">
+            <form action="<?= base_url('AdminPortal/grievance/update') ?>" method="post" class="space-y-4">
                 <?= csrf_field() ?>
-<div>
+                <div>
                     <label class="block text-xs font-bold text-gray-500 uppercase tracking-wider mb-2">Policy Description</label>
                     <textarea name="description" rows="8" class="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-nss-gold focus:ring-2 focus:ring-nss-gold/20 outline-none transition-all text-sm leading-relaxed" placeholder="Enter the official policy text..."><?= $item ? esc($item['description']) : '' ?></textarea>
                 </div>

@@ -174,3 +174,9 @@ public/assets/images/campus/
 *.zip
 nss_college_v2_academic.html
 academicb.pdf
+
+#-------------------------
+# Tailwind Build Tools
+#-------------------------
+tailwindcss.exe
+public/assets/css/tailwind-input.css

@@ -32,9 +32,8 @@ Designations hierarchy: <?= esc($club['_name']) ?>
         </div>
         
         <div class="p-6">
-            <form action="<?= base_url('AdminPortal/clubs/saveDesignations/'.$club['_id']) ?>
-    <?= csrf_field() ?>
-" method="POST" class="space-y-6">
+            <form action="<?= base_url('AdminPortal/clubs/saveDesignations/'.$club['_id']) ?>" method="POST" class="space-y-6">
+                <?= csrf_field() ?>
                 
                 <!-- Existing Designations -->
                 <div>

@@ -8,29 +8,8 @@
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Cinzel:wght@400;500;600&display=swap" rel="stylesheet"/>
     
-    <!-- Tailwind CSS CDN -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            colors: {
-              nss: {
-                navy: '#0d2448',
-                'navy-deep': '#071530',
-                gold: '#b8922a',
-                'gold-bright': '#d4a843',
-                cream: '#fafafa',
-              }
-            },
-            fontFamily: {
-              sans: ['Outfit', 'sans-serif'],
-              serif: ['Cinzel', 'serif'],
-            }
-          }
-        }
-      }
-    </script>
+    <!-- Tailwind CSS (compiled) -->
+    <link rel="stylesheet" href="<?= base_url('assets/css/tailwind.css') ?>"/>
 </head>
 <body class="bg-gray-100 font-sans flex items-center justify-center min-h-screen">
     
