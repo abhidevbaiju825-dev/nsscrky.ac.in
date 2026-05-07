@@ -483,8 +483,8 @@
       $delays = ['', 'd1', 'd2', 'd1', 'd2', 'd3'];
       ?>
       <?php foreach ($display_programmes as $i => $prog): ?>
-        <a href="<?= !empty($prog['syllabus']) ? base_url($prog['syllabus']) : base_url('Home/programs') ?>"
-          class="course-card reveal <?= $delays[$i] ?? '' ?>" style="text-decoration:none;" <?= !empty($prog['syllabus']) ? 'target="_blank"' : '' ?>>
+        <a href="<?= base_url('Home/programs') ?>"
+          class="course-card reveal <?= $delays[$i] ?? '' ?>" style="text-decoration:none;">
           <div class="course-code">PROGRAMME · <?= str_pad($i + 1, 2, '0', STR_PAD_LEFT) ?> ·
             <?= esc($prog['duration'] ?? '3 YEARS') ?></div>
           <div class="course-name"><?= esc($prog['title'] ?? '') ?></div>
