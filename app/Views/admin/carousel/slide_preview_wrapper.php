@@ -6,8 +6,8 @@
     <title>Slide Preview</title>
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Outfit:wght@300;400;500;600;700&family=Cinzel:wght@400;500;600&display=swap" rel="stylesheet"/>
-    <!-- Tailwind CSS CDN -->
-    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Tailwind CSS (compiled) -->
+    <link rel="stylesheet" href="<?= base_url('assets/css/tailwind.css') ?>"/>
     <!-- Custom Home Styles -->
     <link rel="stylesheet" type="text/css" href="<?= base_url('assets/css/home-v2.css') ?>"/>
     <style>

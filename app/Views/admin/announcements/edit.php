@@ -13,11 +13,9 @@ Edit Announcement
         </div>
         
         <div class="p-6">
-            <form action="<?= base_url('AdminPortal/announcements/update/' . $item['id']) ?>
-    <?= csrf_field() ?>
-" method="post" class="space-y-6">
+            <form action="<?= base_url('AdminPortal/announcements/update/' . $item['id']) ?>" method="post" class="space-y-6">
                 <?= csrf_field() ?>
-<div>
+                <div>
                     <label class="block text-sm font-medium text-gray-700 mb-1">Title <span class="text-red-500">*</span></label>
                     <input type="text" class="block w-full rounded-md border-gray-300 border p-2.5 focus:border-nss-gold focus:ring-nss-gold sm:text-sm shadow-sm" name="title" required value="<?= esc($item['title']) ?>">
                 </div>

@@ -14,11 +14,9 @@
         </div>
         
         <div class="p-6 md:p-8">
-            <form action="<?= isset($department) ? base_url('AdminPortal/departments/update/'.$department['_dep_id']) : base_url('AdminPortal/departments/store') ?>
-    <?= csrf_field() ?>
-" method="post" class="space-y-6">
+            <form action="<?= isset($department) ? base_url('AdminPortal/departments/update/'.$department['_dep_id']) : base_url('AdminPortal/departments/store') ?>" method="post" class="space-y-6">
                 <?= csrf_field() ?>
-<div>
+                <div>
                     <label class="block text-sm font-bold text-nss-navy mb-1">Department Full Name <span class="text-red-500">*</span></label>
                     <input type="text" name="department_name" class="block w-full rounded-md border-nss-navy border p-3 focus:border-nss-gold focus:ring-nss-gold sm:text-sm shadow-sm" required value="<?= isset($department) ? esc($department['_department_name']) : '' ?>" placeholder="e.g. Department of Computer Science">
                 </div>
