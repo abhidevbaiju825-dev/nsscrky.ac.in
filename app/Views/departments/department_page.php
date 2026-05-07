@@ -204,7 +204,7 @@
         <h4 style="font-family:'Cinzel',serif;font-size:13px;color:#0d2448;font-weight:600;margin-bottom:14px;letter-spacing:0.05em;">Other Departments</h4>
         <?php foreach($dept as $d): ?>
           <?php if(($d['_dep_id'] ?? '') != ($dept_data['_dep_id'] ?? '')): ?>
-          <a href="<?= base_url('Home/department_view/'.$d['_dep_id'].'/'.preg_replace('#[ -]+#', '-', $d['_department_name'])) ?>" style="display:block;text-decoration:none;padding:8px 12px;margin-bottom:4px;border-radius:6px;font-size:13px;color:#555;transition:all 0.15s;" onmouseover="this.style.background='#f4f4f4';this.style.color='#0d2448'" onmouseout="this.style.background='';this.style.color='#555'">
+          <a href="<?= base_url('Home/department_view/'.$d['_dep_id'].'/'.preg_replace('#[^a-zA-Z0-9]+#', '-', trim($d['_department_name'], '. '))) ?>" style="display:block;text-decoration:none;padding:8px 12px;margin-bottom:4px;border-radius:6px;font-size:13px;color:#555;transition:all 0.15s;" onmouseover="this.style.background='#f4f4f4';this.style.color='#0d2448'" onmouseout="this.style.background='';this.style.color='#555'">
             <?= esc($d['_department_name']) ?>
           </a>
           <?php endif; ?>

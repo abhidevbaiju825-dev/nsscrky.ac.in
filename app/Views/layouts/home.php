@@ -127,7 +127,7 @@
           <button class="<?= str_contains($cp, 'Home/department_view') ? 'nav-btn active' : 'nav-btn' ?>">Departments <span class="nav-chevron">▾</span></button>
           <div class="dropdown" style="min-width:220px;">
             <?php if (!empty($menu_dept_data)): foreach ($menu_dept_data as $dept): ?>
-              <a href="<?= base_url('Home/department_view/'.$dept['_dep_id'].'/'.preg_replace('#[ -]+#', '-', $dept['_department_name'])) ?>" class="dropdown-item"><?= esc($dept['_department_name']) ?></a>
+              <a href="<?= base_url('Home/department_view/'.$dept['_dep_id'].'/'.preg_replace('#[^a-zA-Z0-9]+#', '-', trim($dept['_department_name'], '. '))) ?>" class="dropdown-item"><?= esc($dept['_department_name']) ?></a>
             <?php endforeach; endif; ?>
           </div>
         </div>
@@ -248,7 +248,7 @@
         </button>
         <div class="mob-accordion-content">
           <?php if (!empty($menu_dept_data)): foreach ($menu_dept_data as $dept): ?>
-            <a href="<?= base_url('Home/department_view/'.$dept['_dep_id'].'/'.preg_replace('#[ -]+#', '-', $dept['_department_name'])) ?>" class="mob-sub-link"><?= esc($dept['_department_name']) ?></a>
+            <a href="<?= base_url('Home/department_view/'.$dept['_dep_id'].'/'.preg_replace('#[^a-zA-Z0-9]+#', '-', trim($dept['_department_name'], '. '))) ?>" class="mob-sub-link"><?= esc($dept['_department_name']) ?></a>
           <?php endforeach; endif; ?>
         </div>
       </div>

@@ -45,7 +45,7 @@ $is_contact = ($uri == 'Home/contact');
                         <li class="<?= $is_dept ? 'active' : '' ?>"> <a>DEPARTMENTS</a>
                             <ul class="sub-menu">
                                 <?php if(!empty($menu_dept_data)): foreach($menu_dept_data as $dept): ?>
-                                <li> <a href="<?= base_url('Home/department_view/'.$dept['_dep_id'].'/'. preg_replace('#[ -]+#', '-', $dept['_department_name'])) ?>"><?= esc($dept['_department_name']) ?></a> </li>
+                                <li> <a href="<?= base_url('Home/department_view/'.$dept['_dep_id'].'/'. preg_replace('#[^a-zA-Z0-9]+#', '-', trim($dept['_department_name'], '. '))) ?>"><?= esc($dept['_department_name']) ?></a> </li>
                                 <?php endforeach; endif; ?>
                             </ul>
                         </li>
@@ -220,7 +220,7 @@ $is_contact = ($uri == 'Home/contact');
                 </span>
                 <ul class="sub-menu-m">
                     <?php if(!empty($menu_dept_data)): foreach($menu_dept_data as $dept): ?>
-                    <li class="goto_chilink" > <a href="<?= base_url('Home/department_view/'.$dept['_dep_id'].'/'. preg_replace('#[ -]+#', '-', $dept['_department_name'])) ?>"><?= esc($dept['_department_name']) ?></a> </li>
+                    <li class="goto_chilink" > <a href="<?= base_url('Home/department_view/'.$dept['_dep_id'].'/'. preg_replace('#[^a-zA-Z0-9]+#', '-', trim($dept['_department_name'], '. '))) ?>"><?= esc($dept['_department_name']) ?></a> </li>
                     <?php endforeach; endif; ?>
                 </ul>
             </li>
