@@ -359,6 +359,7 @@ class Home extends BaseController {
                 '_mission'    => $row['mission'] ?? '',
                 '_objectives' => $row['objectives'] ?? '',
                 '_imgloc'     => $row['image'] ?? '',
+                '_syllabus'   => $row['syllabus'] ?? '',
                 '_hodmessage' => '',
             ]]);
         }
