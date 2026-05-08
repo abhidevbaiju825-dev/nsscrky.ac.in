@@ -5,7 +5,7 @@
 <div style="background:linear-gradient(135deg,#0d2448 0%,#071530 100%);padding:60px 0 50px;text-align:center;">
   <div class="max-w-screen-xl mx-auto px-4">
     <div style="font-family:'Cinzel',serif;font-size:14px;letter-spacing:0.3em;text-transform:uppercase;color:#b8922a;margin-bottom:12px;">Roll of Honor</div>
-    <h1 style="font-family:'Cinzel',serif;font-size:36px;color:#fff;font-weight:700;letter-spacing:0.08em;">University Toppers</h1>
+    <h1 style="font-family:'Cinzel',serif;color:#fff;font-weight:700;letter-spacing:0.08em;" class="text-2xl md:text-4xl">University Toppers</h1>
     <div style="width:80px;height:4px;background:#b8922a;margin:20px auto 0;border-radius:2px;"></div>
   </div>
 </div>
@@ -14,19 +14,19 @@
   <div class="max-w-screen-xl mx-auto px-4">
     
     <!-- Top Tier (Rank 1 & 2) -->
-    <div class="grid md:grid-cols-2 gap-8 mb-12 max-w-4xl mx-auto">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 mb-12 max-w-4xl mx-auto">
       <?php
       $topTwo = [
         ['Bobina George', 'Rank: 1', 'Grade: 9.58', 'Model II Computer Application', 'bobina_george.jpg'],
         ['Keerthana C.', 'Rank: 2', 'Grade: 9.32', 'Model I CO Operation', 'keerthana_c.jpg']
       ];
       foreach($topTwo as $t): ?>
-      <div style="background:rgba(255,255,255,0.95);backdrop-filter:blur(10px);border-radius:24px;padding:32px;border:2px solid #b8922a;box-shadow:0 10px 40px rgba(0,0,0,0.1);text-align:center;position:relative;overflow:hidden;">
-        <div style="position:absolute;top:20px;right:-35px;background:#b8922a;color:#fff;padding:8px 45px;transform:rotate(45deg);font-weight:bold;font-size:14px;box-shadow:0 2px 10px rgba(0,0,0,0.1);"><?= $t[1] ?></div>
-        <div style="width:180px;height:180px;margin:0 auto 20px;border-radius:50%;border:4px solid #b8922a;padding:5px;background:#fff;">
+      <div style="background:rgba(255,255,255,0.95);backdrop-filter:blur(10px);border-radius:24px;border:2px solid #b8922a;box-shadow:0 10px 40px rgba(0,0,0,0.1);text-align:center;position:relative;overflow:hidden;" class="p-6 md:p-8">
+        <div style="position:absolute;top:16px;right:-35px;background:#b8922a;color:#fff;padding:6px 45px;transform:rotate(45deg);font-weight:bold;font-size:12px;box-shadow:0 2px 10px rgba(0,0,0,0.1);"><?= $t[1] ?></div>
+        <div style="margin:0 auto 20px;border-radius:50%;border:4px solid #b8922a;padding:5px;background:#fff;" class="w-32 h-32 md:w-44 md:h-44">
           <img src="<?= base_url('assets/img/university_toppers/'.$t[4]) ?>" alt="<?= $t[0] ?>" style="width:100%;height:100%;object-fit:cover;border-radius:50%;">
         </div>
-        <h3 style="font-family:'Cinzel',serif;font-size:24px;color:#0d2448;font-weight:700;margin-bottom:6px;"><?= $t[0] ?></h3>
+        <h3 style="font-family:'Cinzel',serif;color:#0d2448;font-weight:700;margin-bottom:6px;" class="text-lg md:text-2xl"><?= $t[0] ?></h3>
         <p style="font-size:16px;color:#b8922a;font-weight:600;margin-bottom:12px;"><?= $t[2] ?></p>
         <div style="height:1px;background:#eee;margin:16px auto;width:60%;"></div>
         <p style="font-size:13px;color:#666;font-weight:500;"><?= $t[3] ?></p>

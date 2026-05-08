@@ -724,6 +724,59 @@ class Home extends BaseController {
         return view('nss_activity/activity_details', $data);
     }
 
+    // ─── PUBLIC STAFF REGISTRATION ────────────────────────────
+    public function staff_registration()
+    {
+        $data['departments'] = $this->db->table('_departments')->get()->getResultArray();
+        return view('main/staff_registration', $data);
+    }
+
+    public function staff_registration_store()
+    {
+        $file = $this->request->getFile('profile_image');
+
+        $data = [
+            '_name' => $this->request->getPost('name'),
+            '_designation' => $this->request->getPost('designation'),
+            '_role' => $this->request->getPost('role'),
+            '_department' => $this->request->getPost('department_id'),
+            '_email' => $this->request->getPost('email'),
+            '_phone' => $this->request->getPost('phone'),
+            '_qualification' => $this->request->getPost('qualification'),
+            '_status' => 'pending', // Always pending — requires admin approval
+            '_dateofjoin' => $this->request->getPost('dateofjoin') ?: date('Y-m-d'),
+            '_address_line1' => $this->request->getPost('address_line1') ?? '',
+            '_gender' => $this->request->getPost('gender') ?? '',
+            '_dob' => $this->request->getPost('dob') ?: date('Y-m-d'),
+            '_dateofretirement' => $this->request->getPost('dateofretirement') ?: date('Y-m-d'),
+            '_area_of_specialization' => $this->request->getPost('area_of_specialization') ?? '',
+            '_description' => $this->request->getPost('description') ?? '',
+            '_short_name' => $this->request->getPost('short_name') ?? '',
+            '_address_line2' => '',
+            '_bool' => '',
+            '_mobile_visible' => '',
+            '_seniority' => '',
+            '_email_visible' => '',
+            '_subject' => '',
+            '_pan_number' => '',
+            '_pen_number' => '',
+            '_adhar_number' => '',
+            '_approved_by' => '',
+            '_login_id' => 0,
+        ];
+
+        if ($file && $file->isValid() && !$file->hasMoved()) {
+            $newName = $file->getRandomName();
+            $file->move(FCPATH . 'uploads/staff', $newName);
+            $data['_imgloc'] = 'uploads/staff/' . $newName;
+        }
+
+        $staffModel = new \App\Models\StaffModel();
+        $staffModel->insert($data);
+
+        return redirect()->to('Home/staff_registration')->with('success', 'Your registration has been submitted successfully!');
+    }
+
     // ─── CATCH-ALL REMAP ───────────────────────────────────────
     public function _remap($method, ...$params)
     {

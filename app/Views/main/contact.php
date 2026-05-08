@@ -10,7 +10,7 @@
 </div>
 
 <section class="max-w-screen-xl mx-auto px-4 py-14">
-  <div class="grid md:grid-cols-2 gap-10">
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
     <!-- Contact Info -->
     <div>
       <div style="font-family:'Cinzel',serif;font-size:11px;letter-spacing:0.2em;text-transform:uppercase;color:#b8922a;margin-bottom:8px;">Get in Touch</div>

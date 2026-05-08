@@ -1,4 +1,12 @@
 <?= $this->extend('layouts/home') ?>
+<?= $this->section('styles') ?>
+<style>
+@media (max-width: 767px) {
+  .fee-table td, .fee-table th { padding: 10px 8px !important; font-size: 12px !important; }
+  .fee-table td[colspan] { font-size: 13px !important; }
+}
+</style>
+<?= $this->endSection() ?>
 <?= $this->section('content') ?>
 
 <!-- Page Header -->
@@ -12,11 +20,11 @@
 
 <section class="max-w-screen-xl mx-auto px-4 py-14">
   <div class="max-w-4xl mx-auto space-y-10">
-    <div style="background:#fff;border-radius:20px;padding:40px;box-shadow:0 4px 25px rgba(0,0,0,0.05);border:1px solid #f0f0f0;">
+    <div style="background:#fff;border-radius:20px;box-shadow:0 4px 25px rgba(0,0,0,0.05);border:1px solid #f0f0f0;" class="p-5 md:p-10">
       <h2 style="font-family:'Cinzel',serif;font-size:20px;color:#0d2448;font-weight:700;margin-bottom:24px;">Academic Fees Breakdown</h2>
       
-      <div class="overflow-x-auto">
-        <table class="w-full text-left" style="border-collapse: separate; border-spacing: 0;">
+      <div class="overflow-x-auto" style="-webkit-overflow-scrolling:touch;">
+        <table class="w-full text-left fee-table" style="border-collapse: separate; border-spacing: 0; min-width:480px;">
           <thead>
             <tr style="background:#f8fafc;">
               <th style="padding:16px;font-weight:700;color:#0d2448;border-bottom:2px solid #e2e8f0;border-top-left-radius:12px;">Class</th>

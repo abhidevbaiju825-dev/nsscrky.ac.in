@@ -15,10 +15,25 @@ Staff & Faculty Management
             </h4>
             <p class="text-sm text-gray-500 mt-1">Manage teaching faculty and non-teaching office staff profiles.</p>
         </div>
-        <a href="<?= base_url('AdminPortal/staff/create') ?>" class="inline-flex items-center gap-2 px-4 py-2 bg-nss-navy hover:bg-nss-navy-deep text-white text-sm font-medium rounded-lg shadow-sm transition-colors focus:ring-2 focus:ring-offset-2 focus:ring-nss-navy">
-            <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 7.5v3m0 0v3m0-3h3m-3 0h-3m-2.25-4.125a3.375 3.375 0 11-6.75 0 3.375 3.375 0 016.75 0zM4 19.235v-.11a6.375 6.375 0 0112.662 0v.109A12.318 12.318 0 0110.332 21c-2.25 0-4.354-.56-6.332-1.765z" /></svg>
-            Register Staff
-        </a>
+        <div class="flex items-center gap-3 flex-wrap">
+            <!-- Share Public Registration Link -->
+            <div x-data="{ copied: false }">
+                <button @click="navigator.clipboard.writeText('<?= base_url('Home/staff_registration') ?>'); copied = true; setTimeout(() => copied = false, 2000)"
+                        class="inline-flex items-center gap-2 px-4 py-2 bg-white hover:bg-gray-50 text-nss-navy text-sm font-medium rounded-lg shadow-sm transition-colors border border-gray-200 focus:ring-2 focus:ring-offset-2 focus:ring-nss-gold">
+                    <template x-if="!copied">
+                        <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"/></svg>
+                    </template>
+                    <template x-if="copied">
+                        <svg class="w-4 h-4 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+                    </template>
+                    <span x-text="copied ? 'Link Copied!' : 'Share Registration Link'"></span>
+                </button>
+            </div>
+            <a href="<?= base_url('AdminPortal/staff/create') ?>" class="inline-flex items-center gap-2 px-4 py-2 bg-nss-navy hover:bg-nss-navy-deep text-white text-sm font-medium rounded-lg shadow-sm transition-colors focus:ring-2 focus:ring-offset-2 focus:ring-nss-navy">
+                <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 7.5v3m0 0v3m0-3h3m-3 0h-3m-2.25-4.125a3.375 3.375 0 11-6.75 0 3.375 3.375 0 016.75 0zM4 19.235v-.11a6.375 6.375 0 0112.662 0v.109A12.318 12.318 0 0110.332 21c-2.25 0-4.354-.56-6.332-1.765z" /></svg>
+                Register Staff
+            </a>
+        </div>
     </div>
 
     <div class="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden">
@@ -37,6 +52,23 @@ Staff & Faculty Management
                         class="whitespace-nowrap border-b-2 py-4 px-1 text-sm flex items-center gap-2 transition-colors">
                     <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" :class="{'text-nss-navy': activeTab === 'nonteaching', 'text-gray-400': activeTab !== 'nonteaching'}"><path stroke-linecap="round" stroke-linejoin="round" d="M9 17.25v1.007a3 3 0 01-.879 2.122L7.5 21h9l-.621-.621A3 3 0 0115 18.257V17.25m6-12V15a2.25 2.25 0 01-2.25 2.25H5.25A2.25 2.25 0 013 15V5.25m18 0A2.25 2.25 0 0018.75 3H5.25A2.25 2.25 0 003 5.25m18 0V12a2.25 2.25 0 01-2.25 2.25H5.25A2.25 2.25 0 013 12V5.25" /></svg>
                     Non-Teaching & Office Staff
+                </button>
+                <?php
+                    $pendingCount = 0;
+                    if(!empty($staff_list)) {
+                        foreach($staff_list as $_s) {
+                            if(($_s['_status'] ?? '') === 'pending') $pendingCount++;
+                        }
+                    }
+                ?>
+                <button @click="activeTab = 'pending'" 
+                        :class="{'border-amber-500 text-amber-600 font-bold': activeTab === 'pending', 'border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300 font-medium': activeTab !== 'pending'}"
+                        class="whitespace-nowrap border-b-2 py-4 px-1 text-sm flex items-center gap-2 transition-colors">
+                    <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" :class="{'text-amber-500': activeTab === 'pending', 'text-gray-400': activeTab !== 'pending'}"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                    Pending Registrations
+                    <?php if($pendingCount > 0): ?>
+                    <span class="inline-flex items-center justify-center w-5 h-5 rounded-full text-xs font-bold bg-amber-100 text-amber-700 border border-amber-200"><?= $pendingCount ?></span>
+                    <?php endif; ?>
                 </button>
             </nav>
         </div>
@@ -172,6 +204,78 @@ Staff & Faculty Management
                     if(!$hasNonTeaching):
                     ?>
                         <tr><td colspan="5" class="px-6 py-8 text-center text-gray-500 text-sm">No non-teaching/office staff members found.</td></tr>
+                    <?php endif; ?>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Pending Registrations Tab -->
+        <div x-show="activeTab === 'pending'" x-cloak class="overflow-x-auto">
+            <table class="min-w-full divide-y divide-gray-200">
+                <thead class="bg-amber-50">
+                    <tr>
+                        <th scope="col" class="px-6 py-3 text-left text-xs font-semibold text-amber-700 uppercase tracking-wider">Profile</th>
+                        <th scope="col" class="px-6 py-3 text-left text-xs font-semibold text-amber-700 uppercase tracking-wider">Name</th>
+                        <th scope="col" class="px-6 py-3 text-left text-xs font-semibold text-amber-700 uppercase tracking-wider">Designation</th>
+                        <th scope="col" class="px-6 py-3 text-left text-xs font-semibold text-amber-700 uppercase tracking-wider">Role</th>
+                        <th scope="col" class="px-6 py-3 text-right text-xs font-semibold text-amber-700 uppercase tracking-wider">Actions</th>
+                    </tr>
+                </thead>
+                <tbody class="bg-white divide-y divide-gray-200">
+                    <?php 
+                    $hasPending = false;
+                    if(!empty($staff_list)): 
+                        foreach($staff_list as $s): 
+                            if(($s['_status'] ?? '') === 'pending'):
+                                $hasPending = true;
+                    ?>
+                            <tr class="hover:bg-amber-50/30 transition-colors">
+                                <td class="px-6 py-4 whitespace-nowrap">
+                                    <?php if(!empty($s['_imgloc'])): ?>
+                                        <img src="<?= base_url($s['_imgloc']) ?>" class="h-11 w-11 rounded-full object-cover shadow-sm border border-amber-200" alt="Avatar">
+                                    <?php else: ?>
+                                        <div class="h-11 w-11 rounded-full bg-amber-50 flex items-center justify-center text-amber-500 border border-amber-200 shadow-sm">
+                                            <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z" /></svg>
+                                        </div>
+                                    <?php endif; ?>
+                                </td>
+                                <td class="px-6 py-4 whitespace-nowrap">
+                                    <div class="text-sm font-bold text-gray-900"><?= esc($s['_name']) ?></div>
+                                    <div class="text-xs text-gray-500 flex items-center gap-1 mt-0.5">
+                                        <svg class="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>
+                                        <?= esc($s['_email'] ?? 'No email') ?>
+                                    </div>
+                                </td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-700">
+                                    <?= esc($s['_designation']) ?>
+                                </td>
+                                <td class="px-6 py-4 whitespace-nowrap">
+                                    <span class="inline-flex items-center px-2.5 py-0.5 rounded-md text-xs font-medium bg-amber-100 text-amber-800 border border-amber-200">
+                                        <?= ucfirst(esc($s['_role'])) ?>
+                                    </span>
+                                </td>
+                                <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
+                                    <div class="flex items-center justify-end gap-2">
+                                        <a href="<?= base_url('AdminPortal/staff/approve/'.$s['_teacher_id']) ?>" onclick="return confirm('Approve this staff registration?');" class="inline-flex items-center gap-1 px-3 py-1.5 rounded-lg text-xs font-semibold text-green-700 bg-green-50 hover:bg-green-100 transition-colors border border-green-200" title="Approve">
+                                            <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+                                            Approve
+                                        </a>
+                                        <a href="<?= base_url('AdminPortal/staff/edit/'.$s['_teacher_id']) ?>" class="inline-flex items-center justify-center w-8 h-8 rounded-lg text-blue-600 bg-blue-50 hover:bg-blue-100 transition-colors" title="Edit">
+                                            <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M16.862 4.487l1.687-1.688a1.875 1.875 0 112.652 2.652L6.832 19.82a4.5 4.5 0 01-1.897 1.13l-2.685.8.8-2.685a4.5 4.5 0 011.13-1.897L16.863 4.487zm0 0L19.5 7.125" /></svg>
+                                        </a>
+                                        <a href="<?= base_url('AdminPortal/staff/delete/'.$s['_teacher_id']) ?>" onclick="return confirm('Reject and remove this registration?');" class="inline-flex items-center justify-center w-8 h-8 rounded-lg text-red-600 bg-red-50 hover:bg-red-100 transition-colors" title="Reject">
+                                            <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M14.74 9l-.346 9m-4.788 0L9.26 9m9.968-3.21c.342.052.682.107 1.022.166m-1.022-.165L18.16 19.673a2.25 2.25 0 01-2.244 2.077H8.084a2.25 2.25 0 01-2.244-2.077L4.772 5.79m14.456 0a48.108 48.108 0 00-3.478-.397m-12 .562c.34-.059.68-.114 1.022-.165m0 0a48.11 48.11 0 013.478-.397m7.5 0v-.916c0-1.18-.91-2.164-2.09-2.201a51.964 51.964 0 00-3.32 0c-1.18.037-2.09 1.022-2.09 2.201v.916m7.5 0a48.667 48.667 0 00-7.5 0" /></svg>
+                                        </a>
+                                    </div>
+                                </td>
+                            </tr>
+                    <?php 
+                            endif;
+                        endforeach; 
+                    endif; 
+                    if(!$hasPending):
+                    ?>
+                        <tr><td colspan="5" class="px-6 py-8 text-center text-gray-500 text-sm">No pending registrations. Share the registration link with staff to allow self-registration.</td></tr>
                     <?php endif; ?>
                 </tbody>
             </table>

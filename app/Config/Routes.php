@@ -68,6 +68,7 @@ $routes->group('AdminPortal/staff', static function ($routes) {
     $routes->get('edit/(:num)', 'AdminStaff::edit/$1');
     $routes->post('update/(:num)', 'AdminStaff::update/$1');
     $routes->get('delete/(:num)', 'AdminStaff::delete/$1');
+    $routes->get('approve/(:num)', 'AdminStaff::approve/$1');
 });
 
 // Admin CRUD - Principal Desk
@@ -305,6 +306,8 @@ $routes->group('AdminPortal/enquiries', static function ($routes) {
 
 // Public Form Submissions
 $routes->post('submit-grievance', 'Home::submit_grievance');
+$routes->get('Home/staff_registration', 'Home::staff_registration');
+$routes->post('Home/staff_registration_store', 'Home::staff_registration_store');
 
 // Public Alumni Portal
 $routes->group('alumni', static function ($routes) {

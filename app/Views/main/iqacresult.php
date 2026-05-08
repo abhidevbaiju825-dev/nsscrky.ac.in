@@ -10,9 +10,9 @@
 </div>
 
 <section class="max-w-screen-xl mx-auto px-4 py-14">
-  <div class="grid md:grid-cols-4 gap-8">
-    <!-- IQAC Sidebar -->
-    <div>
+  <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+    <!-- IQAC Sidebar (on mobile: appears after content via order) -->
+    <div class="order-2 md:order-1">
       <div style="background:#f9fafb;border-radius:12px;padding:16px;border:1px solid #eee;">
         <?php $slinks = [['Home/iqac','IQAC Home','🏠'],['Home/aqar','AQAR','📄'],['Home/nirf1','NIRF','📊'],['Home/iqacresult','Results','🎓'],['Home/best','Best Practices','⭐'],['Home/naac_certificates','NAAC Certificate','🏅'],['Home/institutional_distinctiveness','Distinctiveness','🏆'],['Home/naac_journey','NAAC Journey','🗺️']];
         foreach($slinks as $sl): ?>
@@ -22,7 +22,7 @@
     </div>
 
     <!-- Content -->
-    <div class="md:col-span-3">
+    <div class="md:col-span-3 order-1 md:order-2">
       <?php
       $results = [
         ['Result 2021-2022', 'assets/feedback/result2122.pdf', [
