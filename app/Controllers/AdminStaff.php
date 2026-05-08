@@ -130,4 +130,10 @@ class AdminStaff extends BaseController
         $this->staffModel->delete($id);
         return redirect()->to('AdminPortal/staff')->with('message', 'Staff member removed from records.');
     }
+
+    public function approve($id)
+    {
+        $this->staffModel->update($id, ['_status' => 'approved']);
+        return redirect()->to('AdminPortal/staff')->with('message', 'Staff registration approved and published.');
+    }
 }
