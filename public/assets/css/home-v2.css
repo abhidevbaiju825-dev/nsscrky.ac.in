@@ -1,4 +1,4 @@
-﻿/* ΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉ
+/* ΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉ
    NSS College Rajakumari ΓÇö Home Page V2 Design System
    Custom styles for components that Tailwind can't express
 ΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉ */
@@ -604,3 +604,34 @@ body { font-family: 'Outfit', sans-serif; color: var(--ink); }
     .ticker-item { padding: 0 25px; font-size: 13px; }
 }
 
+/* ─── SUBPAGE MOBILE FIXES ─────────────────────────────────── */
+@media (max-width: 767px) {
+  /* Prevent horizontal overflow on all pages */
+  main { overflow-x: hidden; }
+
+  /* Staff grid cards - prevent email overflow */
+  .grid a p { word-break: break-all; }
+
+  /* Tables: ensure overflow scroll on all subpage tables */
+  table { min-width: 100%; }
+
+  /* Staff filter pills: allow wrapping */
+  div[style*="display:flex"][style*="flex-wrap:wrap"] a[style*="border-radius:20px"] {
+    font-size: 12px !important;
+    padding: 6px 14px !important;
+  }
+
+  /* Placement tables on mobile */
+  .overflow-x-auto { -webkit-overflow-scrolling: touch; }
+
+  /* Contact map min-height reduction */
+  div[style*="min-height:400px"] { min-height: 280px !important; }
+  iframe[style*="min-height:400px"] { min-height: 280px !important; }
+}
+
+/* Fix alumni legacy pages when using main layout */
+@media (max-width: 767px) {
+  .col-md-offset-1 { margin-left: 0 !important; }
+  .col-md-10 { width: 100% !important; float: none !important; }
+  .panel-body .row .col-xs-12 { padding-left: 8px; padding-right: 8px; }
+}

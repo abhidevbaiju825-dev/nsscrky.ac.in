@@ -24,7 +24,7 @@
 <?php foreach($management as $row): ?>
 <section style="background:#f9fafb;border-top:1px solid #eee;border-bottom:1px solid #eee;">
   <div class="max-w-screen-xl mx-auto px-4 py-14">
-    <div class="grid md:grid-cols-2 gap-10 items-start">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-start">
       <div>
         <div style="font-family:'Cinzel',serif;font-size:11px;letter-spacing:0.2em;text-transform:uppercase;color:#b8922a;margin-bottom:8px;">Institution</div>
         <h2 style="font-family:'Cinzel',serif;font-size:24px;color:#0d2448;font-weight:600;margin-bottom:16px;">Our Management</h2>
@@ -52,7 +52,7 @@
   <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
     <?php foreach($our_team as $row): ?>
     <div style="text-align:center;background:#fff;border-radius:12px;padding:24px 16px;box-shadow:0 2px 15px rgba(0,0,0,0.06);border:1px solid #f0f0f0;transition:transform 0.2s,box-shadow 0.2s;" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='0 8px 25px rgba(13,36,72,0.12)'" onmouseout="this.style.transform='';this.style.boxShadow='0 2px 15px rgba(0,0,0,0.06)'">
-      <div style="width:100px;height:100px;border-radius:50%;overflow:hidden;margin:0 auto 12px;border:3px solid rgba(184,146,42,0.3);">
+      <div style="border-radius:50%;overflow:hidden;margin:0 auto 12px;border:3px solid rgba(184,146,42,0.3);" class="w-20 h-20 md:w-24 md:h-24">
         <img src="<?= ($row['_imgloc'] == '') ? base_url('uploads/static/avatar.png') : base_url($row['_imgloc']) ?>" alt="" style="width:100%;height:100%;object-fit:cover;">
       </div>
       <h4 style="font-size:14px;font-weight:600;color:#0d2448;margin-bottom:4px;"><?= esc($row['_name']) ?></h4>

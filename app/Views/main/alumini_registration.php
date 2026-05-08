@@ -1,160 +1,118 @@
-<?= $this->extend('layouts/main') ?>
+<?= $this->extend('layouts/home') ?>
 <?= $this->section('content') ?>
 
-<!DOCTYPE html>
-<html lang="en">
+<!-- Page Header -->
+<div style="background:linear-gradient(135deg,#0d2448 0%,#071530 100%);padding:48px 0 40px;">
+  <div class="max-w-screen-xl mx-auto px-4">
+    <h1 style="font-family:'Cinzel',serif;font-size:28px;color:#fff;font-weight:600;letter-spacing:0.06em;">Alumni Registration</h1>
+    <div style="width:60px;height:3px;background:#b8922a;margin-top:10px;border-radius:2px;"></div>
+  </div>
+</div>
 
-<head>
-    <title>Alumini Registration</title>
-    <meta charset="UTF-8">
-    <meta name="description" content="NSS College Rajakumari was established and started functioning as a First grade degree college in the year 1995 and is affiliated to Mahatma Gandhi University, Kottayam, Kerala.The College offers three job degree courses, BBA, BCA, BSc. (Electronics) and B-Com (Model II), having six semesters spreading over three years.To comply with UGC requirements a new course, B-Com with Computer Applications was started in the year 2002." />
-    <meta name="keywords" content="nss college ,nss rajakumari,msc electronics ,colleges in rajakumari,top 10 colleges in kerala,nss,rajakumari,colleges in kerala,studey bcom,study bsc electronics,toprated colleges in kerala,colleges in wayanadu,rajakumari college," />
-    <meta name="author" content="Shahnad - SD Ignosi Enterprises" />
-    <meta name="copyright" content="Ignosi Enterprises Pvt. Ltd.">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    
-    <style>
-        .panel-default>.panel-heading {
-                color: #fff;
-                background-color: #233785;
-                border-color: #773f3f;
-            }
-        </style>
-</head>
+<section class="max-w-screen-xl mx-auto px-4 py-14">
+  <div class="max-w-3xl mx-auto">
 
-<body class="animsition restyle-index">
-    <header>
-        
-    </header>
-    <div class="container" style="margin-top:30px">
-        <?php if(isset($_SESSION['s_msg'])){ ?>
-        <div class="alert alert-success">
-            <i class="close icon"></i>
-            <div class="header">
-                <?php if(isset($_SESSION['s_msg']['message'])){ echo $_SESSION['s_msg']['message']; } ?>
-            </div>
-            <?php if(isset($_SESSION['s_msg']['submessage'])){ echo $_SESSION['s_msg']['submessage']; } ?>
-        </div>
-        <?php unset($_SESSION['s_msg']); } ?>
-
-        <div class="col-md-10 col-md-offset-1">
-            <div class="panel panel-default">
-                <div class="panel-heading">
-                    <h3 class="panel-title"><strong>Alumini Registration </strong></h3>
-                    <!--      <div style="float:right; font-size: 80%; position: relative; top:-10px"><a href="#">Forgot password?</a></div>-->
-                </div>
-                <div class="panel-body" style="margin-top: 27px;">
-                    <form action="<?php echo site_url('alumini_portal/insert_aluminimembers'); ?>" method="POST" enctype="multipart/form-data">
-    <?= csrf_field() ?>
-                        <div class="row">
-                            <div class="col-xs-12 col-sm-4 col-md-4">
-                                <div class="form-group">
-                                    <label>Name</label>
-                                    <input type="text" name="name" id="name" class="form-control" placeholder=" Name" tabindex="1" required>
-                                </div>
-                            </div>
-                            <div class="col-xs-12 col-sm-4 col-md-4">
-                                <div class="form-group">
-                                    <label>Date of Birth</label>
-                                    <input type="date" name="dob" id="dob" class="form-control" placeholder="Date of Birth :&nbsp;&nbsp;&nbsp;" tabindex="1">
-                                </div>
-                            </div>
-                            <div class="col-xs-12 col-sm-4 col-md-4">
-                                <div class="form-group">
-                                    <label>Mobile</label>
-                                    <input type="text" name="number" required id="number" class="form-control " placeholder="Contact Number" tabindex="2">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label>Address</label>
-                            <textarea rows="2" name="address" id="address" class="form-control " placeholder="Address" tabindex="3"></textarea>
-                        </div>
-                        <div class="form-group">
-                            <label>Job Specification</label>
-                            <input type="text" name="job" id="job" class="form-control " placeholder="Job Specification" tabindex="2">
-                        </div>
-                        <div class="row">
-                            <div class="col-xs-12 col-sm-4 col-md-4">
-                                <div class="form-group">
-                                    <label>Email</label>
-                                    <input type="email" required name="email" id="email" class="form-control" placeholder=" Email" tabindex="1">
-                                </div>
-                            </div>
-                            <div class="col-xs-12 col-sm-4 col-md-4">
-                                <div class="form-group">
-                                    <label>Location</label>
-                                    <input type="text" name="location" id="location" class="form-control" placeholder="Location" tabindex="1">
-                                </div>
-                            </div>
-                            <div class="col-xs-12 col-sm-4 col-md-4">
-                                <div class="form-group">
-                                    <label>Blood Group</label>
-                                    <select class="form-control" name="bloodgroup">
-                                        <option value=""> -- Select Blood Group --</option>
-                                        <option value="O+">O+</option>
-                                        <option value="O-">O-</option>
-                                        <option value="A+">A+</option>
-                                        <option value="A-">A-</option>
-                                        <option value="B+">B+</option>
-                                        <option value="B-">B-</option>
-                                        <option value="AB+">AB+</option>
-                                        <option value="AB-">AB-</option>
-                                    </select>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-xs-12 col-sm-4 col-md-4">
-                                <div class="form-group">
-                                    <label>User Name (Email)</label>
-                                    <input type="text" name="username" required id="username" class="form-control" placeholder="Emaiil" tabindex="1">
-                                </div>
-                            </div>
-                            <div class="col-xs-12 col-sm-4 col-md-4">
-                                <div class="form-group">
-                                    <label>Password</label>
-                                    <input type="password" required name="password" id="password" class="form-control " placeholder="Password" tabindex="5">
-                                </div>
-                            </div>
-                            <div class="col-xs-12 col-sm-4 col-md-4">
-                                <div class="form-group">
-                                    <label>Confirm Password</label>
-                                    <input type="password" required name="password_confirmation" id="password_confirmation" class="form-control " placeholder="Confirm Password" tabindex="6">
-                                    <span style="margin-left: 343px;" id='message'></span>
-
-                                </div>
-                            </div>
-                        </div>
-                        <button type="submit" style=" color: #fff; background-color: #233785;" class="btn btn-success">Sign in</button>
-                        <hr style="margin-top:10px;margin-bottom:10px;">
-                    </form>
-                </div>
-            </div>
-        </div>
+    <?php if(isset($_SESSION['s_msg'])): ?>
+    <div style="background:#e8f5e9;border-left:4px solid #2e7d32;padding:16px;border-radius:8px;margin-bottom:20px;">
+      <p style="color:#1b5e20;margin:0;font-size:14px;">
+        <?php if(isset($_SESSION['s_msg']['message'])){ echo $_SESSION['s_msg']['message']; } ?>
+        <?php if(isset($_SESSION['s_msg']['submessage'])){ echo ' ' . $_SESSION['s_msg']['submessage']; } ?>
+      </p>
     </div>
-    <footer class="bg4 p-t-25">
-        
-    </footer>
-    <!-- Back to top -->
-    <div class="btn-back-to-top hov-bg-main" id="myBtn"> <span class="symbol-btn-back-to-top">
-            <i class="fa fa-angle-double-up" aria-hidden="true"></i>
-        </span> </div>
-    
-</body>
+    <?php unset($_SESSION['s_msg']); endif; ?>
+
+    <div style="background:#fff;border-radius:16px;box-shadow:0 4px 25px rgba(0,0,0,0.05);border:1px solid #f0f0f0;overflow:hidden;">
+      <div style="background:#0d2448;padding:20px 24px;">
+        <h3 style="color:#fff;font-family:'Cinzel',serif;font-size:18px;font-weight:600;">Alumni Registration Form</h3>
+      </div>
+      <div style="padding:24px;" class="md:!p-10">
+        <form action="<?php echo site_url('alumini_portal/insert_aluminimembers'); ?>" method="POST" enctype="multipart/form-data">
+          <?= csrf_field() ?>
+
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-4" style="margin-bottom:16px;">
+            <div>
+              <label style="display:block;font-size:13px;font-weight:600;color:#0d2448;margin-bottom:6px;">Name *</label>
+              <input type="text" name="name" id="name" placeholder="Full Name" required style="width:100%;padding:10px 14px;border-radius:8px;border:1px solid #ddd;outline:none;font-size:14px;transition:border 0.2s;" onfocus="this.style.borderColor='#0d2448'" onblur="this.style.borderColor='#ddd'">
+            </div>
+            <div>
+              <label style="display:block;font-size:13px;font-weight:600;color:#0d2448;margin-bottom:6px;">Date of Birth</label>
+              <input type="date" name="dob" id="dob" style="width:100%;padding:10px 14px;border-radius:8px;border:1px solid #ddd;outline:none;font-size:14px;transition:border 0.2s;" onfocus="this.style.borderColor='#0d2448'" onblur="this.style.borderColor='#ddd'">
+            </div>
+            <div>
+              <label style="display:block;font-size:13px;font-weight:600;color:#0d2448;margin-bottom:6px;">Mobile *</label>
+              <input type="text" name="number" id="number" placeholder="Contact Number" required style="width:100%;padding:10px 14px;border-radius:8px;border:1px solid #ddd;outline:none;font-size:14px;transition:border 0.2s;" onfocus="this.style.borderColor='#0d2448'" onblur="this.style.borderColor='#ddd'">
+            </div>
+          </div>
+
+          <div style="margin-bottom:16px;">
+            <label style="display:block;font-size:13px;font-weight:600;color:#0d2448;margin-bottom:6px;">Address</label>
+            <textarea rows="2" name="address" id="address" placeholder="Your Address" style="width:100%;padding:10px 14px;border-radius:8px;border:1px solid #ddd;outline:none;font-size:14px;transition:border 0.2s;" onfocus="this.style.borderColor='#0d2448'" onblur="this.style.borderColor='#ddd'"></textarea>
+          </div>
+
+          <div style="margin-bottom:16px;">
+            <label style="display:block;font-size:13px;font-weight:600;color:#0d2448;margin-bottom:6px;">Job Specification</label>
+            <input type="text" name="job" id="job" placeholder="Current Job / Profession" style="width:100%;padding:10px 14px;border-radius:8px;border:1px solid #ddd;outline:none;font-size:14px;transition:border 0.2s;" onfocus="this.style.borderColor='#0d2448'" onblur="this.style.borderColor='#ddd'">
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-4" style="margin-bottom:16px;">
+            <div>
+              <label style="display:block;font-size:13px;font-weight:600;color:#0d2448;margin-bottom:6px;">Email *</label>
+              <input type="email" name="email" id="email" placeholder="Email Address" required style="width:100%;padding:10px 14px;border-radius:8px;border:1px solid #ddd;outline:none;font-size:14px;transition:border 0.2s;" onfocus="this.style.borderColor='#0d2448'" onblur="this.style.borderColor='#ddd'">
+            </div>
+            <div>
+              <label style="display:block;font-size:13px;font-weight:600;color:#0d2448;margin-bottom:6px;">Location</label>
+              <input type="text" name="location" id="location" placeholder="City / Town" style="width:100%;padding:10px 14px;border-radius:8px;border:1px solid #ddd;outline:none;font-size:14px;transition:border 0.2s;" onfocus="this.style.borderColor='#0d2448'" onblur="this.style.borderColor='#ddd'">
+            </div>
+            <div>
+              <label style="display:block;font-size:13px;font-weight:600;color:#0d2448;margin-bottom:6px;">Blood Group</label>
+              <select name="bloodgroup" style="width:100%;padding:10px 14px;border-radius:8px;border:1px solid #ddd;outline:none;font-size:14px;background:#fff;">
+                <option value="">-- Select --</option>
+                <option value="O+">O+</option>
+                <option value="O-">O-</option>
+                <option value="A+">A+</option>
+                <option value="A-">A-</option>
+                <option value="B+">B+</option>
+                <option value="B-">B-</option>
+                <option value="AB+">AB+</option>
+                <option value="AB-">AB-</option>
+              </select>
+            </div>
+          </div>
+
+          <div style="height:1px;background:#eee;margin:24px 0;"></div>
+          <h4 style="font-size:14px;font-weight:700;color:#0d2448;margin-bottom:16px;">Login Credentials</h4>
+
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-4" style="margin-bottom:24px;">
+            <div>
+              <label style="display:block;font-size:13px;font-weight:600;color:#0d2448;margin-bottom:6px;">Username (Email) *</label>
+              <input type="text" name="username" id="username" placeholder="Email as Username" required style="width:100%;padding:10px 14px;border-radius:8px;border:1px solid #ddd;outline:none;font-size:14px;transition:border 0.2s;" onfocus="this.style.borderColor='#0d2448'" onblur="this.style.borderColor='#ddd'">
+            </div>
+            <div>
+              <label style="display:block;font-size:13px;font-weight:600;color:#0d2448;margin-bottom:6px;">Password *</label>
+              <input type="password" name="password" id="password" placeholder="Password" required style="width:100%;padding:10px 14px;border-radius:8px;border:1px solid #ddd;outline:none;font-size:14px;transition:border 0.2s;" onfocus="this.style.borderColor='#0d2448'" onblur="this.style.borderColor='#ddd'">
+            </div>
+            <div>
+              <label style="display:block;font-size:13px;font-weight:600;color:#0d2448;margin-bottom:6px;">Confirm Password *</label>
+              <input type="password" name="password_confirmation" id="password_confirmation" placeholder="Confirm Password" required style="width:100%;padding:10px 14px;border-radius:8px;border:1px solid #ddd;outline:none;font-size:14px;transition:border 0.2s;" onfocus="this.style.borderColor='#0d2448'" onblur="this.style.borderColor='#ddd'">
+              <span id="message" style="font-size:12px;margin-top:4px;display:block;"></span>
+            </div>
+          </div>
+
+          <button type="submit" style="background:#0d2448;color:#fff;padding:14px 48px;border-radius:10px;font-weight:600;font-size:15px;transition:all 0.2s;cursor:pointer;border:none;" onmouseover="this.style.background='#b8922a';this.style.transform='translateY(-2px)'" onmouseout="this.style.background='#0d2448';this.style.transform='none'">Register</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
 <script>
-    $('#password_confirmation').on('keyup', function() {
-        if ($('#password').val() == $('#password_confirmation').val()) {
-            $('#message').html('Matching').css('color', 'green');
-        } else
-            $('#message').html('Not Matching').css('color', 'red');
-    });
-
+$('#password_confirmation').on('keyup', function() {
+    if ($('#password').val() == $('#password_confirmation').val()) {
+        $('#message').html('✓ Passwords match').css('color', 'green');
+    } else {
+        $('#message').html('✗ Not matching').css('color', 'red');
+    }
+});
 </script>
-<script src='../../img1.wsimg.com/tcc/tcc_l.combined.1.0.6.min.js'></script>
-<!-- Mirrored from templates.aucreative.co/drive/course-detail.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 07 Dec 2018 14:56:22 GMT -->
-
-</html>
-
 
 <?= $this->endSection() ?>

@@ -1,4 +1,12 @@
 <?= $this->extend('layouts/home') ?>
+<?= $this->section('styles') ?>
+<style>
+@media (max-width: 767px) {
+  .exam-section .exam-card { padding: 20px !important; }
+  .exam-table th, .exam-table td { padding: 10px 12px !important; font-size: 13px !important; }
+}
+</style>
+<?= $this->endSection() ?>
 <?= $this->section('content') ?>
 
 <!-- Page Header -->
@@ -9,11 +17,11 @@
   </div>
 </div>
 
-<section class="max-w-screen-xl mx-auto px-4 py-14">
+<section class="max-w-screen-xl mx-auto px-4 py-14 exam-section">
   <div class="max-w-4xl mx-auto space-y-12">
     
     <!-- Assessment Overview -->
-    <div style="background:#fff;border-radius:16px;padding:32px;box-shadow:0 4px 25px rgba(0,0,0,0.05);border:1px solid #f0f0f0;">
+    <div class="exam-card" style="background:#fff;border-radius:16px;padding:32px;box-shadow:0 4px 25px rgba(0,0,0,0.05);border:1px solid #f0f0f0;">
       <h2 style="font-family:'Cinzel',serif;font-size:22px;color:#0d2448;font-weight:600;margin-bottom:20px;">Evaluation Scheme</h2>
       <p style="line-height:1.8;color:#444;margin-bottom:24px;">The evaluation of each course shall contain two parts:</p>
       
@@ -36,27 +44,27 @@
       <div style="padding:20px 32px;background:#0d2448;">
         <h3 style="font-family:'Cinzel',serif;font-size:18px;color:#fff;font-weight:600;">7-Point Grading Scale</h3>
       </div>
-      <div class="overflow-x-auto">
-        <table class="w-full text-left border-collapse">
+      <div class="overflow-x-auto" style="-webkit-overflow-scrolling:touch;">
+        <table class="w-full text-left border-collapse exam-table">
           <thead>
             <tr class="bg-gray-50 border-b">
-              <th class="px-8 py-4 text-sm font-semibold text-gray-700">Percentage of Marks</th>
-              <th class="px-8 py-4 text-sm font-semibold text-gray-700">Grade</th>
-              <th class="px-8 py-4 text-sm font-semibold text-gray-700">Grade Point</th>
+              <th class="px-4 md:px-8 py-4 text-sm font-semibold text-gray-700">Percentage of Marks</th>
+              <th class="px-4 md:px-8 py-4 text-sm font-semibold text-gray-700">Grade</th>
+              <th class="px-4 md:px-8 py-4 text-sm font-semibold text-gray-700">Grade Point</th>
             </tr>
           </thead>
           <tbody class="divide-y divide-gray-100">
-            <tr><td class="px-8 py-4 text-sm">90 and above</td><td class="px-8 py-4 text-sm font-medium">A+ - Outstanding</td><td class="px-8 py-4 text-sm">10</td></tr>
-            <tr><td class="px-8 py-4 text-sm">80 - 89</td><td class="px-8 py-4 text-sm font-medium">A - Excellent</td><td class="px-8 py-4 text-sm">9</td></tr>
-            <tr><td class="px-8 py-4 text-sm">70 - 79</td><td class="px-8 py-4 text-sm font-medium">B - Very Good</td><td class="px-8 py-4 text-sm">8</td></tr>
-            <tr><td class="px-8 py-4 text-sm">60 - 69</td><td class="px-8 py-4 text-sm font-medium">C - Good</td><td class="px-8 py-4 text-sm">7</td></tr>
-            <tr><td class="px-8 py-4 text-sm">50 - 59</td><td class="px-8 py-4 text-sm font-medium">D - Satisfactory</td><td class="px-8 py-4 text-sm">6</td></tr>
-            <tr><td class="px-8 py-4 text-sm">40 - 49</td><td class="px-8 py-4 text-sm font-medium">E - Adequate</td><td class="px-8 py-4 text-sm">5</td></tr>
-            <tr><td class="px-8 py-4 text-sm text-red-600 font-medium">Below 40</td><td class="px-8 py-4 text-sm text-red-600 font-medium">F - Failure</td><td class="px-8 py-4 text-sm text-red-600">4</td></tr>
+            <tr><td class="px-4 md:px-8 py-3 text-sm">90 and above</td><td class="px-4 md:px-8 py-3 text-sm font-medium">A+ - Outstanding</td><td class="px-4 md:px-8 py-3 text-sm">10</td></tr>
+            <tr><td class="px-4 md:px-8 py-3 text-sm">80 - 89</td><td class="px-4 md:px-8 py-3 text-sm font-medium">A - Excellent</td><td class="px-4 md:px-8 py-3 text-sm">9</td></tr>
+            <tr><td class="px-4 md:px-8 py-3 text-sm">70 - 79</td><td class="px-4 md:px-8 py-3 text-sm font-medium">B - Very Good</td><td class="px-4 md:px-8 py-3 text-sm">8</td></tr>
+            <tr><td class="px-4 md:px-8 py-3 text-sm">60 - 69</td><td class="px-4 md:px-8 py-3 text-sm font-medium">C - Good</td><td class="px-4 md:px-8 py-3 text-sm">7</td></tr>
+            <tr><td class="px-4 md:px-8 py-3 text-sm">50 - 59</td><td class="px-4 md:px-8 py-3 text-sm font-medium">D - Satisfactory</td><td class="px-4 md:px-8 py-3 text-sm">6</td></tr>
+            <tr><td class="px-4 md:px-8 py-3 text-sm">40 - 49</td><td class="px-4 md:px-8 py-3 text-sm font-medium">E - Adequate</td><td class="px-4 md:px-8 py-3 text-sm">5</td></tr>
+            <tr><td class="px-4 md:px-8 py-3 text-sm text-red-600 font-medium">Below 40</td><td class="px-4 md:px-8 py-3 text-sm text-red-600 font-medium">F - Failure</td><td class="px-4 md:px-8 py-3 text-sm text-red-600">4</td></tr>
           </tbody>
         </table>
       </div>
-      <div style="padding:16px 32px;background:#f9fafb;font-size:12px;color:#888;">
+      <div style="background:#f9fafb;font-size:12px;color:#888;" class="px-4 md:px-8 py-4">
         <strong>Note:</strong> Decimals are to be rounded to the next whole number.
       </div>
     </div>

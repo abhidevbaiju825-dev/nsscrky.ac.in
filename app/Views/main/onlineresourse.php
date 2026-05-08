@@ -12,9 +12,9 @@
 <section class="max-w-screen-xl mx-auto px-4 py-14">
   <!-- Search Filters -->
   <div style="background:#f9fafb;border-radius:16px;padding:24px;border:1px solid #eee;margin-bottom:32px;box-shadow:inset 0 2px 10px rgba(0,0,0,0.02);">
-    <form action="<?= base_url('Home/onlineresourses'); ?>" method="POST" class="grid md:grid-cols-11 gap-4 items-end">
+    <form action="<?= base_url('Home/onlineresourses'); ?>" method="POST" style="display:grid;gap:16px;" class="grid-cols-1 md:grid-cols-3 items-end">
       <?= csrf_field() ?>
-      <div class="md:col-span-4">
+      <div>
         <label style="display:block;font-size:12px;font-weight:700;color:#0d2448;margin-bottom:8px;text-transform:uppercase;">Course</label>
         <select id="course" name="course" style="width:100%;padding:10px 14px;border-radius:8px;border:1px solid #ddd;outline:none;font-size:14px;background:#fff;">
           <option value="">Select Course</option>
@@ -23,13 +23,13 @@
           <?php endforeach; ?>
         </select>
       </div>
-      <div class="md:col-span-4">
+      <div>
         <label style="display:block;font-size:12px;font-weight:700;color:#0d2448;margin-bottom:8px;text-transform:uppercase;">Subject</label>
         <select id="subject" name="subject" style="width:100%;padding:10px 14px;border-radius:8px;border:1px solid #ddd;outline:none;font-size:14px;background:#fff;">
           <option value="">Select Subject</option>
         </select>
       </div>
-      <div class="md:col-span-3">
+      <div>
         <button type="submit" style="width:100%;background:#0d2448;color:#fff;padding:10px 24px;border-radius:8px;font-weight:600;font-size:14px;transition:all 0.2s;border:none;cursor:pointer;" onmouseover="this.style.background='#b8922a'" onmouseout="this.style.background='#0d2448'">
           Search Resources
         </button>

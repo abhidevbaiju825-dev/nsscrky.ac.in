@@ -56,7 +56,8 @@
           <?php foreach($year as $val): ?>
           <div style="background:#fff;border-radius:16px;overflow:hidden;box-shadow:0 4px 25px rgba(0,0,0,0.04);border:1px solid #eee;">
             <div style="padding:16px 24px;background:#0d2448;color:#fff;font-weight:700;font-size:16px;"><?= $val['_year'] ?> Recruitment Drive</div>
-            <div class="overflow-x-auto">
+            <!-- Desktop table -->
+            <div class="hidden md:block overflow-x-auto">
               <table class="w-full text-left border-collapse">
                 <thead>
                   <tr class="bg-gray-50 border-b">
@@ -71,12 +72,25 @@
                     <tr class="hover:bg-gray-50 transition-colors">
                       <td class="px-6 py-4 text-sm font-semibold text-gray-800"><?= strtoupper($row['_studentname']) ?></td>
                       <td class="px-6 py-4 text-sm text-gray-600"><?= strtoupper($row['_departmentname']) ?></td>
-                      <td class="px-6 py-4 text-sm font-medium text-gold-700" style="color:#b8922a;"><?= strtoupper($row['_companyname']) ?></td>
+                      <td class="px-6 py-4 text-sm font-medium" style="color:#b8922a;"><?= strtoupper($row['_companyname']) ?></td>
                     </tr>
                     <?php endif; ?>
                   <?php endforeach; ?>
                 </tbody>
               </table>
+            </div>
+
+            <!-- Mobile card layout -->
+            <div class="md:hidden space-y-2" style="padding:12px;">
+              <?php foreach($dataall as $row ): ?>
+                <?php if($row['_year']==$val['_year']): ?>
+                <div style="background:#f9fafb;border-radius:10px;padding:12px 14px;border:1px solid #eee;">
+                  <div style="font-weight:600;color:#0d2448;font-size:14px;"><?= strtoupper($row['_studentname']) ?></div>
+                  <div style="font-size:12px;color:#666;margin-top:2px;"><?= strtoupper($row['_departmentname']) ?></div>
+                  <div style="font-size:12px;color:#b8922a;font-weight:600;margin-top:4px;">🏢 <?= strtoupper($row['_companyname']) ?></div>
+                </div>
+                <?php endif; ?>
+              <?php endforeach; ?>
             </div>
           </div>
           <?php endforeach; ?>

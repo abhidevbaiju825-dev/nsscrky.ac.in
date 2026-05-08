@@ -147,7 +147,9 @@
     <div style="font-family:'Cinzel',serif;font-size:11px;letter-spacing:0.2em;text-transform:uppercase;color:#b8922a;margin-bottom:8px;">Doctoral</div>
     <h2 style="font-family:'Cinzel',serif;font-size:22px;color:#0d2448;font-weight:600;margin-bottom:8px;">Research Programmes</h2>
     <div style="width:50px;height:3px;background:#b8922a;margin-bottom:24px;border-radius:2px;"></div>
-    <div style="background:#fff;border-radius:12px;overflow:hidden;box-shadow:0 2px 15px rgba(0,0,0,0.05);border:1px solid #eee;">
+
+    <!-- Desktop table -->
+    <div class="hidden md:block" style="background:#fff;border-radius:12px;overflow:hidden;box-shadow:0 2px 15px rgba(0,0,0,0.05);border:1px solid #eee;">
       <table style="width:100%;border-collapse:collapse;">
         <thead>
           <tr style="background:#0d2448;">
@@ -160,6 +162,18 @@
           <tr><td style="padding:14px 20px;text-align:center;color:#888;">2</td><td style="padding:14px 20px;color:#0d2448;font-weight:500;">Computer Applications</td></tr>
         </tbody>
       </table>
+    </div>
+
+    <!-- Mobile card layout -->
+    <div class="md:hidden space-y-3">
+      <div style="background:#fff;border-radius:12px;padding:16px;border:1px solid #eee;box-shadow:0 2px 10px rgba(0,0,0,0.04);display:flex;align-items:center;gap:12px;">
+        <div style="width:32px;height:32px;border-radius:50%;background:#0d2448;color:#fff;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:600;flex-shrink:0;">1</div>
+        <div style="font-weight:600;color:#0d2448;font-size:15px;">Electronics</div>
+      </div>
+      <div style="background:#fff;border-radius:12px;padding:16px;border:1px solid #eee;box-shadow:0 2px 10px rgba(0,0,0,0.04);display:flex;align-items:center;gap:12px;">
+        <div style="width:32px;height:32px;border-radius:50%;background:#0d2448;color:#fff;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:600;flex-shrink:0;">2</div>
+        <div style="font-weight:600;color:#0d2448;font-size:15px;">Computer Applications</div>
+      </div>
     </div>
   </div>
 </section>

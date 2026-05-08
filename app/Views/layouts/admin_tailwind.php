@@ -27,14 +27,13 @@
     
     <?= $this->renderSection('styles') ?>
 </head>
-<body class="bg-gray-50 text-gray-800 font-sans antialiased overflow-hidden flex h-screen">
+<body class="bg-gray-50 text-gray-800 font-sans antialiased overflow-hidden flex h-screen" x-data="{ sidebarOpen: false }" @keydown.escape.window="sidebarOpen = false">
 
     <!-- Mobile Sidebar Overlay -->
-    <div x-data="{ open: false }" @open-sidebar.window="open = true" @keydown.escape.window="open = false">
-        <div x-show="open" x-transition.opacity class="fixed inset-0 bg-gray-900 bg-opacity-50 z-20 lg:hidden" @click="open = false" x-cloak></div>
+    <div x-show="sidebarOpen" x-transition.opacity class="fixed inset-0 bg-gray-900 bg-opacity-50 z-20 lg:hidden" @click="sidebarOpen = false" x-cloak></div>
 
-        <!-- Sidebar -->
-        <aside :class="open ? 'translate-x-0' : '-translate-x-full'" class="fixed inset-y-0 left-0 z-30 w-64 bg-nss-navy-deep text-white transition-transform duration-300 lg:translate-x-0 lg:static lg:inset-auto flex flex-col h-screen shadow-xl border-r border-nss-navy">
+    <!-- Sidebar -->
+    <aside :class="sidebarOpen ? 'translate-x-0' : '-translate-x-full'" class="fixed inset-y-0 left-0 z-30 w-64 bg-nss-navy-deep text-white transition-transform duration-300 lg:translate-x-0 lg:static lg:inset-auto flex flex-col h-screen shadow-xl border-r border-nss-navy">
             <!-- Sidebar Header -->
             <div class="flex items-center justify-center h-20 border-b border-white/10 shrink-0">
                 <div class="text-center">
@@ -208,7 +207,6 @@
 
             </nav>
         </aside>
-    </div>
 
     <!-- Main Content Wrapper -->
     <div class="flex-1 flex flex-col h-screen overflow-hidden bg-gray-50">
@@ -216,7 +214,7 @@
         <!-- Top Navbar -->
         <header class="bg-white border-b border-gray-200 h-20 shrink-0 flex items-center justify-between px-6 z-10 shadow-sm">
             <div class="flex items-center gap-4">
-                <button @click="$dispatch('open-sidebar')" class="lg:hidden text-gray-500 hover:text-nss-navy focus:outline-none">
+                <button @click="sidebarOpen = true" class="lg:hidden text-gray-500 hover:text-nss-navy focus:outline-none">
                     <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
                 </button>
                 <h2 class="text-xl font-bold text-nss-navy"><?= $this->renderSection('page_title') ?></h2>
