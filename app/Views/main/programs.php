@@ -208,7 +208,10 @@ function showDetails(id) {
   $.ajax({
     url: '<?= base_url() ?>Home/course_details',
     type: 'post',
-    data: { course_id: id },
+    data: { 
+      course_id: id,
+      '<?= csrf_token() ?>': '<?= csrf_hash() ?>'
+    },
     success: function(data) {
       var d = typeof data === 'string' ? JSON.parse(data) : data;
       var r = d.responceData;
