@@ -93,9 +93,7 @@ Announcement Ticker
                      @click.away="showModal = false"
                      class="relative transform overflow-hidden rounded-xl bg-white text-left shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-lg">
                     
-                    <form action="<?= base_url('AdminPortal/announcements/store') ?>
-    <?= csrf_field() ?>
-" method="post">
+                    <form action="<?= base_url('AdminPortal/announcements/store') ?>" method="post">
                         <?= csrf_field() ?>
 <!-- Modal Header -->
                         <div class="bg-gray-50 px-6 py-4 border-b border-gray-200 flex items-center justify-between">

@@ -21,9 +21,7 @@ Add IQAC Document
         </h5>
     </div>
     <div class="p-6">
-        <form action="<?= base_url('AdminPortal/iqac/store') ?>
-    <?= csrf_field() ?>
-" method="post" enctype="multipart/form-data" class="space-y-6">
+        <form action="<?= base_url('AdminPortal/iqac/store') ?>" method="post" enctype="multipart/form-data" class="space-y-6">
             <?= csrf_field() ?>
 <div class="grid grid-cols-1 md:grid-cols-12 gap-6">
                 <div class="md:col-span-4">

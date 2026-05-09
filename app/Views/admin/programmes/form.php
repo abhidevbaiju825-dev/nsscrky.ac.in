@@ -21,9 +21,7 @@
         </a>
     </div>
 
-    <form action="<?= base_url('AdminPortal/programmes/store') ?>
-    <?= csrf_field() ?>
-" method="post" enctype="multipart/form-data" class="space-y-6">
+    <form action="<?= base_url('AdminPortal/programmes/store') ?>" method="post" enctype="multipart/form-data" class="space-y-6">
         <?= csrf_field() ?>
 <input type="hidden" name="id" value="<?= $programme ? $programme['id'] : '' ?>">
 

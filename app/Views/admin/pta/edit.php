@@ -21,9 +21,7 @@ Edit PTA Entry
         </h5>
     </div>
     <div class="p-6">
-        <form action="<?= base_url('AdminPortal/pta/update/' . $item['id']) ?>
-    <?= csrf_field() ?>
-" method="POST" enctype="multipart/form-data" class="space-y-6">
+        <form action="<?= base_url('AdminPortal/pta/update/' . $item['id']) ?>" method="POST" enctype="multipart/form-data" class="space-y-6">
             <?= csrf_field() ?>
 <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div class="col-span-1">

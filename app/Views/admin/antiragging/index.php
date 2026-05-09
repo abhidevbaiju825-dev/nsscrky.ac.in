@@ -30,9 +30,7 @@ Anti-Ragging Cell Management
 <div class="max-w-4xl">
     <div class="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden">
         <div class="p-6">
-            <form action="<?= base_url('AdminPortal/antiragging/update') ?>
-    <?= csrf_field() ?>
-" method="POST" enctype="multipart/form-data" class="space-y-6">
+            <form action="<?= base_url('AdminPortal/antiragging/update') ?>" method="POST" enctype="multipart/form-data" class="space-y-6">
                 <?= csrf_field() ?>
 <div>
                     <label class="block text-sm font-medium text-gray-700 mb-1">Policy / Description</label>
