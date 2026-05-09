@@ -17,9 +17,7 @@ Alumni Activities & Events
                 </h5>
             </div>
             <div class="p-6">
-                <form action="<?= base_url('AdminPortal/alumni/store_activity') ?>
-    <?= csrf_field() ?>
-" method="post" enctype="multipart/form-data" class="space-y-4">
+                <form action="<?= base_url('AdminPortal/alumni/store_activity') ?>" method="post" enctype="multipart/form-data" class="space-y-4">
                     <?= csrf_field() ?>
 <div>
                         <label class="block text-xs font-bold text-gray-500 uppercase tracking-wider mb-1">Activity Title</label>

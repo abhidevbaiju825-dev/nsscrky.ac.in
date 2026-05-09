@@ -17,9 +17,7 @@ NAAC Management
         </div>
         <div class="p-6">
             <div class="bg-gray-50 rounded-xl p-6 border border-gray-100 mb-8">
-                <form action="<?= base_url('AdminPortal/naac/store_certificate') ?>
-    <?= csrf_field() ?>
-" method="POST" enctype="multipart/form-data" class="grid grid-cols-1 md:grid-cols-12 gap-4 items-end">
+                <form action="<?= base_url('AdminPortal/naac/store_certificate') ?>" method="POST" enctype="multipart/form-data" class="grid grid-cols-1 md:grid-cols-12 gap-4 items-end">
                     <?= csrf_field() ?>
 <div class="md:col-span-4">
                         <label class="block text-[10px] font-bold text-gray-400 uppercase tracking-wider mb-1">Title <span class="text-red-500">*</span></label>
@@ -78,9 +76,7 @@ NAAC Management
         </div>
         <div class="p-6">
             <div class="bg-gray-50 rounded-xl p-6 border border-gray-100 mb-8">
-                <form action="<?= base_url('AdminPortal/naac/store_journey') ?>
-    <?= csrf_field() ?>
-" method="POST" class="grid grid-cols-1 md:grid-cols-12 gap-4 items-end">
+                <form action="<?= base_url('AdminPortal/naac/store_journey') ?>" method="POST" class="grid grid-cols-1 md:grid-cols-12 gap-4 items-end">
                     <?= csrf_field() ?>
 <div class="md:col-span-4">
                         <label class="block text-[10px] font-bold text-gray-400 uppercase tracking-wider mb-1">Event Title <span class="text-red-500">*</span></label>
@@ -145,9 +141,7 @@ NAAC Management
         </div>
         <div class="p-6">
             <div class="bg-gray-50 rounded-xl p-6 border border-gray-100 mb-8">
-                <form action="<?= base_url('AdminPortal/naac/store_cordinator') ?>
-    <?= csrf_field() ?>
-" method="POST" enctype="multipart/form-data" class="grid grid-cols-1 md:grid-cols-12 gap-4 items-end">
+                <form action="<?= base_url('AdminPortal/naac/store_cordinator') ?>" method="POST" enctype="multipart/form-data" class="grid grid-cols-1 md:grid-cols-12 gap-4 items-end">
                     <?= csrf_field() ?>
 <div class="md:col-span-3">
                         <label class="block text-[10px] font-bold text-gray-400 uppercase tracking-wider mb-1">Coordinator Name <span class="text-red-500">*</span></label>

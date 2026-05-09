@@ -17,9 +17,7 @@ About Page Management
         </div>
         <div class="p-6">
             <div class="bg-gray-50 rounded-xl p-6 border border-gray-100 mb-8">
-                <form action="<?= base_url('AdminPortal/about/store_management') ?>
-    <?= csrf_field() ?>
-" method="POST" enctype="multipart/form-data" class="grid grid-cols-1 md:grid-cols-12 gap-4 items-end">
+                <form action="<?= base_url('AdminPortal/about/store_management') ?>" method="POST" enctype="multipart/form-data" class="grid grid-cols-1 md:grid-cols-12 gap-4 items-end">
                     <?= csrf_field() ?>
 <div class="md:col-span-5">
                         <label class="block text-[10px] font-bold text-gray-400 uppercase tracking-wider mb-1">Description <span class="text-red-500">*</span></label>
@@ -97,9 +95,7 @@ About Page Management
         </div>
         <div class="p-6">
             <div class="bg-gray-50 rounded-xl p-6 border border-gray-100 mb-8">
-                <form action="<?= base_url('AdminPortal/about/store_team') ?>
-    <?= csrf_field() ?>
-" method="POST" enctype="multipart/form-data" class="grid grid-cols-1 md:grid-cols-12 gap-4 items-end">
+                <form action="<?= base_url('AdminPortal/about/store_team') ?>" method="POST" enctype="multipart/form-data" class="grid grid-cols-1 md:grid-cols-12 gap-4 items-end">
                     <?= csrf_field() ?>
 <div class="md:col-span-3">
                         <label class="block text-[10px] font-bold text-gray-400 uppercase tracking-wider mb-1">Name <span class="text-red-500">*</span></label>

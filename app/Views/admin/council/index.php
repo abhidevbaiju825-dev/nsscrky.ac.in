@@ -17,9 +17,7 @@ College Council Management
         </div>
         <div class="p-6">
             <div class="bg-gray-50 rounded-xl p-6 border border-gray-100 mb-8">
-                <form action="<?= base_url('AdminPortal/council/store_incharge') ?>
-    <?= csrf_field() ?>
-" method="POST" enctype="multipart/form-data" class="space-y-4">
+                <form action="<?= base_url('AdminPortal/council/store_incharge') ?>" method="POST" enctype="multipart/form-data" class="space-y-4">
                     <?= csrf_field() ?>
 <div class="grid grid-cols-1 md:grid-cols-12 gap-4 items-end">
                         <div class="md:col-span-3">
@@ -97,9 +95,7 @@ College Council Management
         </div>
         <div class="p-6">
             <div class="bg-gray-50 rounded-xl p-6 border border-gray-100 mb-8">
-                <form action="<?= base_url('AdminPortal/council/store_member') ?>
-    <?= csrf_field() ?>
-" method="POST" class="grid grid-cols-1 md:grid-cols-12 gap-4 items-end">
+                <form action="<?= base_url('AdminPortal/council/store_member') ?>" method="POST" class="grid grid-cols-1 md:grid-cols-12 gap-4 items-end">
                     <?= csrf_field() ?>
 <div class="md:col-span-4">
                         <label class="block text-[10px] font-bold text-gray-400 uppercase tracking-wider mb-1">Name <span class="text-red-500">*</span></label>

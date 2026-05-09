@@ -22,9 +22,7 @@ Scholarship Management
         </h6>
     </div>
     <div class="p-5">
-        <form action="<?= isset($edit) ? base_url('AdminPortal/scholarship/update/'.$edit['_scholarship_id']) : base_url('AdminPortal/scholarship/store') ?>
-    <?= csrf_field() ?>
-" method="POST">
+        <form action="<?= isset($edit) ? base_url('AdminPortal/scholarship/update/'.$edit['_scholarship_id']) : base_url('AdminPortal/scholarship/store') ?>" method="POST">
             <?= csrf_field() ?>
 <div class="grid grid-cols-1 md:grid-cols-12 gap-4 items-end">
                 <div class="md:col-span-4">

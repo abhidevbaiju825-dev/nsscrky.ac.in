@@ -76,9 +76,7 @@ Anti-Ragging Complaints
                                 <?php endif; ?>
                             </td>
                             <td class="px-5 py-4 whitespace-nowrap text-right">
-                                <form action="<?= base_url('AdminPortal/antiragging/updateStatus/' . $c['id']) ?>
-    <?= csrf_field() ?>
-" method="POST" class="inline-flex items-center gap-2">
+                                <form action="<?= base_url('AdminPortal/antiragging/updateStatus/' . $c['id']) ?>" method="POST" class="inline-flex items-center gap-2">
                                     <?= csrf_field() ?>
 <select name="status" class="rounded-md border-gray-300 border p-1.5 focus:border-nss-gold focus:ring-nss-gold text-xs shadow-sm w-32">
                                         <option value="pending" <?= $c['status'] === 'pending' ? 'selected' : '' ?>>Pending</option>

@@ -37,9 +37,7 @@ Club & Cell Activities / News
             </div>
             
             <div class="p-5">
-                <form action="<?= base_url('AdminPortal/clubs/activities/store') ?>
-    <?= csrf_field() ?>
-" method="POST" enctype="multipart/form-data" class="space-y-4">
+                <form action="<?= base_url('AdminPortal/clubs/activities/store') ?>" method="POST" enctype="multipart/form-data" class="space-y-4">
                     <div>
                         <label class="block text-xs font-bold text-gray-500 uppercase tracking-wider mb-1.5">Select Originating Club/Cell <span class="text-red-500">*</span></label>
                         <select name="club_id" class="block w-full rounded-md border-gray-300 border p-2 focus:border-nss-gold focus:ring-nss-gold sm:text-sm shadow-sm" required>

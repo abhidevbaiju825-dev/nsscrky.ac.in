@@ -23,9 +23,7 @@ Downloads Management
     </div>
     
     <div class="p-5">
-        <form action="<?= base_url('AdminPortal/downloads/store') ?>
-    <?= csrf_field() ?>
-" method="POST" enctype="multipart/form-data">
+        <form action="<?= base_url('AdminPortal/downloads/store') ?>" method="POST" enctype="multipart/form-data">
             <?= csrf_field() ?>
 <div class="grid grid-cols-1 md:grid-cols-12 gap-4 items-end">
                 <div class="md:col-span-4">
