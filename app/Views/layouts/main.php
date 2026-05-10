@@ -7,6 +7,10 @@
     <meta name="description" content="NSS College Rajakumari was established and started functioning as a First grade degree college in the year 1995..." />
     
     <link rel="icon" type="image/png" href="<?= base_url('uploads/static/icons/favicon.png') ?>"/>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Cinzel:wght@400;500;600&display=swap" rel="stylesheet"/>
+
     <link rel="stylesheet" type="text/css" href="<?= base_url('assets/vendor/bootstrap/css/bootstrap.min.css') ?>">
     <link rel="stylesheet" type="text/css" href="<?= base_url('assets/fonts/font-awesome-4.7.0/css/font-awesome.min.css') ?>">
     <link rel="stylesheet" type="text/css" href="<?= base_url('assets/fonts/elegant-font/html-css/style.css') ?>">

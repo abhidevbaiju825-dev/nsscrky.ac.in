@@ -15,11 +15,11 @@ $is_contact = ($uri == 'Home/contact');
 ?>
 <div>
     <div class="container-menu-desktop">
-        <div class="top-bar bg-main">
+        <div class="top-bar bg-main" style="background: linear-gradient(180deg, #091c3a 0%, #0d2448 100%);">
             <div class="container">
                 <div class="content-topbar">
                     <div class="left-top-bar">
-                        <p style="color:white; font-size:12px;"> Aided,Recognized U/S 2(F) and 12(B) of UGC Act 1956 Accredited by NAAC with B+ Grade (2.70)</p>
+                        <p style="color:#ffffff; font-size:11.5px; font-family:'Outfit',sans-serif; font-weight:400; letter-spacing:0.04em;"> Aided, Recognized U/S 2(F) and 12(B) of UGC Act 1956 · <span style="color:#d4a843; font-weight:500;">NAAC Accredited B+ Grade (2.70)</span></p>
                     </div>
                     <div class="right-top-bar"> 
                         <span>
@@ -113,7 +113,7 @@ $is_contact = ($uri == 'Home/contact');
             </div>
         </div>
     </div>
-    <nav id="navigation_update" class="navbar navbar-expand-lg navbar-light " >
+    <nav id="navigation_update" class="navbar navbar-expand-lg navbar-dark" >
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
