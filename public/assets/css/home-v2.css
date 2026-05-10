@@ -390,13 +390,20 @@ body { font-family: 'Outfit', sans-serif; color: var(--ink); }
 .nav-btn {
     display: inline-flex; align-items: center; gap: 4px;
     font-family: 'Outfit', sans-serif;
-    font-size: 13px; font-weight: 500; letter-spacing: 0.06em;
+    font-size: 13.5px; font-weight: 700; letter-spacing: 0.07em;
     text-transform: uppercase; color: var(--navy);
     padding: 10px 14px; background: none; border: none;
     cursor: pointer; text-decoration: none;
     transition: color 0.2s;
     white-space: nowrap;
+    position: relative;
 }
+.nav-btn::after {
+    content: ''; position: absolute; bottom: 4px; left: 14px; right: 14px;
+    height: 2px; background: var(--gold); transform: scaleX(0);
+    transform-origin: center; transition: transform 0.3s ease;
+}
+.nav-btn:hover::after, .nav-btn.active::after { transform: scaleX(1); }
 .nav-btn:hover, .nav-btn.active { color: var(--gold); }
 .nav-chevron { font-size: 9px; color: var(--muted); transition: transform 0.2s; }
 .nav-item:hover .nav-chevron { transform: rotate(180deg); color: var(--gold); }

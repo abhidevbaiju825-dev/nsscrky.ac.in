@@ -30,7 +30,7 @@
 <!-- ═══════════════════════════════
      TOP UTILITY BAR
 ═══════════════════════════════ -->
-<div id="top-bar" style="background:#071530;border-bottom:1px solid rgba(184,146,42,0.25);padding:10px 0;font-size:12px;">
+<div id="top-bar" style="background:linear-gradient(180deg, #091c3a 0%, #0d2448 100%);border-bottom:1px solid rgba(184,146,42,0.25);padding:10px 0;font-size:12px;">
   <div class="max-w-screen-xl mx-auto px-4 flex items-center justify-between gap-4">
     <!-- Contact -->
     <div class="flex items-center gap-4">
@@ -63,7 +63,7 @@
 <!-- ═══════════════════════════════
      MAIN NAVBAR
 ═══════════════════════════════ -->
-<nav id="main-nav" style="background:#fff;border-bottom:3px solid #b8922a;box-shadow:0 2px 20px rgba(13,36,72,0.1);position:sticky;top:0;z-index:9999;transition:all 0.3s ease;">
+<nav id="main-nav" style="background:#fff;border-bottom:3px solid #b8922a;box-shadow:0 2px 20px rgba(13,36,72,0.08);position:sticky;top:0;z-index:9999;transition:all 0.3s ease;">
   <div class="max-w-screen-xl mx-auto px-4">
     <div class="flex items-center gap-4 py-4">
 
